@@ -350,9 +350,6 @@ class WSDLAPI implements JbillingAPI {
        */
       public function create( UserWS $user, OrderWS $order ) {
 
-print_r( $this->__toComplexDataType( $order ) );
-exit;
-
              $result = $this->getSoapClient()->create( $this->__toComplexDataType( $user ), $this->__toComplexDataType( $order ) );
              if( $result instanceof SOAP_Fault )
                   throw new JbillingAPIException( $result->message );
@@ -706,7 +703,7 @@ exit;
        */
       public function applyPayment( PaymentWS $payment, $invoiceId ) {
 
-              $result = $this->getSoapClient()->applyPayment( $payment, $invoiceId );
+              $result = $this->getSoapClient()->applyPayment( $this->__toComplexDataType( $payment ), $invoiceId );
               if( $result instanceof SOAP_Fault )
                   throw new JbillingAPIException( $result->message );
 
@@ -822,22 +819,16 @@ exit;
                         }
 
                         // Matches a PHP integer type
-                        if( gettype( $value ) == "integer" || gettype( $value ) == "int" ) {
+                        if( gettype( $value ) == "integer" || gettype( $value ) == "int" )
                             $dataType = "int";
-                            echo "casted $property to int<br>";
-                        }
 
                         // Matches PHP float
-                        if( is_float( $value ) ) {
+                        if( is_float( $value ) )
                             $dataType = "float";
-                            echo "casted $property to float<br>";
-                        }
 
                         // Matches PHP double
-                        if( gettype( $value ) == "JavaDouble" ) {
+                        if( gettype( $value ) == "JavaDouble" )
                             $dataType = "double";
-                            echo "casted $property to double<br>";
-                        }
 
                         // Matches PHP boolean
                         if( gettype( $value ) == "boolean" )
