@@ -27,6 +27,14 @@ $this->name = substr($this->name, 0, $p);
 This TODO which needs to be re-examined later causes a bug with the Jbilling PHP library when working with complex data types (specifically object properties which are of an Array data type).
 
 
+UNIT Testing:
+-------------
+To use the testing package, install PHP Unit 3 via PEAR.
+
+pear channel-discover pear.phpunit.de
+pear install phpunit/PHPUnit
+
+
 Usage:
 ------
 Include the jBillingAPIFactory in your project using something like:
