@@ -19,11 +19,11 @@
 
 require_once 'BaseTest.php';
 
-class CreateOrderTest extends BaseTest {
+class ApplyPaymentTest extends BaseTest {
 
 	  private $invoiceId = 2304;
 
-	  public function CreateOrderTest() { }
+	  public function ApplyPaymentTest() { }
 
 	  public function test() {
 
