@@ -1,6 +1,7 @@
 <?php
-# PHP JBillingAPIFactory
-# Copyright (C) 2008  Make A Byte, inc
+
+# jbilling-php-api
+# Copyright (C) 2007-2009  Make A Byte, inc
 # http://www.makeabyte.com
 
 # This program is free software: you can redistribute it and/or modify
