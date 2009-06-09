@@ -153,7 +153,7 @@ class PaymentWS {
 	   */
 	  public function setMethodId( $id ) {
 	  	
-	  	     $this->method = $id;
+	  	     $this->methodId = $id;
 	  }
 	  /**
 	   * Sets the resultId property of the PaymentWS object
@@ -375,7 +375,7 @@ class PaymentWS {
 	   */
 	  public function getMethodId() {
 
-	  	     return $this->method;
+	  	     return $this->methodId;
 	  }
 	  /**
 	   * Gets the resultId property of the PaymentWS object
