@@ -18,11 +18,9 @@
 -->
 <phpunit>
   <testsuite name="jbilling-php-api">
-    <!--
     <file>CreateTest.php</file>
     <file>CreateUserTest.php</file>
     <file>CreateOrderTest.php</file>
-    -->
     <file>ApplyPaymentTest.php</file>
   </testsuite>
 </phpunit>
