@@ -1,33 +1,15 @@
-Requirements:
+REQUIREMENTS:
 -------------
-This wrapper requires the use of PEAR SOAP. Refer to the PHP documentation for details on installing PEAR SOAP on your system.
+PHP 5.0+
+PHP 5 Soap extension (http://www.php.net/soap)
 
 
-Installation:
-------------_
-Copy the contents of the /src folder to your project folder.
+INSTALLATION:
+-------------
+Copy the contents of the /src folder to your project.
 
 
-PEAR SOAP:
-----------
-There is a bug in the current version of the PEAR SOAP library which requires the following edit to SOAP/Base.php beginning on line 1242.
-
-/*
-// A little more magic than should be in a qname.
-$p = strpos($this->name, '[');
-if ($p) {
-// TODO: Need to re-examine this logic later.
-// Chop off [].
-$this->arraySize = explode(',', substr($this->name, $p + 1, -$p - 2));
-$this->arrayInfo = substr($this->name, $p);
-$this->name = substr($this->name, 0, $p);
-}
-*/
-
-This TODO which needs to be re-examined later causes a bug with the Jbilling PHP library when working with complex data types (specifically object properties which are of an Array data type).
-
-
-UNIT Testing:
+UNIT TESTING:
 -------------
 To use the testing package, install PHP Unit 3 via PEAR.
 
@@ -35,13 +17,16 @@ pear channel-discover pear.phpunit.de
 pear install phpunit/PHPUnit
 
 
-Usage:
+USAGE:
 ------
 Include the jBillingAPIFactory in your project using something like:
 
-require_once( "jbilling-php-api-v1_1/src/JbillingAPIFactory.php" );
+<code>require_once( "jbillingphpapi/src/JbillingAPIFactory.php" );</code>
 
-$jbilling = jbillingAPIFactory::getAPI( "http://localhost/jboss-net/services/billing?wsdl", "admin", "123qwe" );
+Currently, only CXF (SOAP) is supported. A future version will include the Hessian protocol as well. The CXF API can be created like this: 
+
+<code>
+$api = jbillingAPIFactory::getAPI( "http://localhost:8080/billing/cxf/soap.service?wsdl", "admin", "123qwe", JBILLINGAPI_TYPE_CXF );
 
 // Instantiate each of the required JBilling objects
 $UserWS = new UserWS();
@@ -100,14 +85,15 @@ $OrderWS->setUserId( 22 ); // Penny bright
 
 // Attempt to create the new user and purcahse order
 try {
-      print_r( $jbilling->create( $UserWS, $OrderWS ) ); // New id's returned
-      //print_r( $jbilling->createUser( $UserWS ) );  // New user id returned
-      //print_r( $jbilling->createOrder( $OrderWS ) ); // New order id returned
-      //print_r( $jbilling->getUserWS( 22 ) );  // User details for penny bright
+      print_r( $api->create( $UserWS, $OrderWS ) ); // New id's returned
+      //print_r( $api->createUser( $UserWS ) );  // New user id returned
+      //print_r( $api->createOrder( $OrderWS ) ); // New order id returned
+      //print_r( $api->getUserWS( 22 ) );  // User details for penny bright
 }
 catch( JbillingAPIException $jbex ) {
 
         print_r( $jbex );
 }
+</code>
 
-Enjoy :)
+Enjoy! :)
