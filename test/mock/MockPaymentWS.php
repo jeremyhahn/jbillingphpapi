@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * @package com.makeabyte.contrib.jbilling.php.test
+ * @package com.makeabyte.contrib.jbilling.php.test.mock
  */
 
 class MockPaymentWS extends MockObject {
@@ -30,15 +30,14 @@ class MockPaymentWS extends MockObject {
 
 	  public function getObject() {
 
-	  	     $this->PaymentWS->setId( 1 );
-	  	     $this->PaymentWS->setAmount( 50.00 );
-	  	     $this->PaymentWS->setBalance( 50.00 );
-	  	     $this->PaymentWS->setPaymentDate( date('c') );
-	  	     $this->PaymentWS->setMethodId( 1 ); // Cheque
-	  	     $this->PaymentWS->setCurrencyId( 1 ); // US Dollar
-	  	     $this->PaymentWS->setUserId( 22 ); // Penny Bright
-	  	     $this->PaymentWS->setMethod( "check" );
-	  	     $this->PaymentWS->setPaymentId( -1 );
+	  	     $this->PaymentWS->setId( PAYMENT_ID );
+	  	     $this->PaymentWS->setAmount( PAYMENT_AMOUNT );
+	  	     $this->PaymentWS->setIsRefund( PAYMENT_ISREFUND );
+	  	     $this->PaymentWS->setMethodId( PAYMENT_METHODID );
+	  	     $this->PaymentWS->setPaymentDate( PAYMENT_PAYMENTDATE );
+	  	     $this->PaymentWS->setResultId( PAYMENT_RESULTID );
+	  	     $this->PaymentWS->setCurrencyId( PAYMENT_CURRENCYID );
+	  	     $this->PaymentWS->setUserId( PAYMENT_USERID );
 
 			 return $this->PaymentWS;
 	  }

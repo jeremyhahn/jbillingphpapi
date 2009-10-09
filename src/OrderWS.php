@@ -29,37 +29,210 @@
 
 class OrderWS {
 
-      var $activeSince;       // The point in time when this order will start being active, reflecting when the customer will be invoiced for the items included.  A null value indicates that the order was active at creation time (see field createDate).
-      var $activeUntil;       // The point in time when this order stops being active. After this date, the order will stop generating new invoices, indicating that the services included in this order should stop being delivered to the customer. A null value would specify an open-ended order. Such order never expires; it is considered on-going and will require explicit cancellation for it to stop generating invoices.
-      var $anticipatePeriods; // How many periods in advance the order should invoice for. Leave with a '0' unless you have configured the system to work with anticipated periods.
-      var $billingTypeId;     // Indicates if this order is to be paid for before or after the service is provided. Pre-paid orders are invoiced in advance to the customer, while post-paid are only invoiced once the goods or services included in the order have been delivered. “1” means “pre-paid”, while “2” means “post-paid”.
-      var $billingTypeStr;    // (read only).This will show the word that represents the billing type. It is ignored when you submit the object.
-      var $createDate;        // (read only). A time stamp with the date and time when this order was originally created.
-      var $createdBy;         // The id of the user that has created this order.
-      var $currencyId;        // Currency code. Refer to Appendix A for a list of acceptable values.
-      var $deleted;           // A flag that indicates if this record is logically  deleted in the database. This allows for ‘undo’ of deletions. Valid values are 0 – the record is not deleted 1 – the record is considered deleted.
-      var $dfFm;              // Only used for specific Italian business rules.
-      var $dueDateUnitId;     // If this order has a specified due date, this will the the units (days, months, years). See Appendix A for valid values.
-      var $dueDateValue;      // How many units will be used for the due date.
-      var $id;                // A unique number that identifies this record.
-      var $lastNotified;      // When the order has expiration notification, this field tells when the last one was sent.
-      var $nextBillableDay;   // The date when this order should generate a new invoice. Meaning that until that date (and excluding that date), the customer has been invoiced for the service included in this order. 
-      var $notes;             // A free text field for your notes.
-      var $notesInInvoice;    // “1” if this order's notes will be included in the invoice, or “0” if not.
-      var $notificationStep;  // What step has been completed in the order
-      var $notify;            // If this order will generate notification as the 'active since' date approaches.
-      var $orderLines;        // The order lines belonging to this order. These objects will specify the items included in this order with their prices and quantities. See the OrderLineWS specification for more information.
-      var $ownInvoice;        // A flag to indicate if this order should generate an invoice on its own. The default behavior is that many orders can generate one invoice.
-      var $period;            // Indicates the periodicity of this order. In other words, how often this order will generate an invoice. Examples of periods are: one time, monthly, weekly, etc. Period codes can be seen in jbilling's User Interface under “Orders -> Periods”.
-      var $periodStr;         // (read only). The description of the order period.
-      var $statusId;          // An order has to be on status ‘Active’ in order to generate invoices. An order usually starts in active status, and only goes to suspended or finished when the customer fails to make the required payments. The steps and actions taken due to late payments are part of the ageing process. See Appendix A for a list of acceptable order status codes.
-      var $userId;            // This order belongs to the user specified by this field.
+	  /**
+	   * The point in time when this order will start being active, reflecting when the 
+	   * customer will be invoiced for the items included.  A null value indicates
+	   * that the order was active at creation time (see field createDate).
+	   * @var Date 
+	   */
+      var $activeSince;
+      
+      /**
+       * The point in time when this order stops being active. After this date, the order
+       * will stop generating new invoices, indicating that the services included in this
+       * order should stop being delivered to the customer. A null value would specify an
+       * open-ended order. Such order never expires; it is considered on-going and will
+       * require explicit cancellation for it to stop generating invoices.
+       * 
+       * @var Date
+       */
+      var $activeUntil;
+
+      /**
+       * How many periods in advance the order should invoice for. Leave with a '0' unless
+       * you have configured the system to work with anticipated periods.
+       * 
+       * @var Integer
+       */
+      var $anticipatePeriods;
+
+      /**
+       * Indicates if this order is to be paid for before or after the service is provided.
+       * Pre-paid orders are invoiced in advance to the customer, while post-paid are only
+	   * invoiced once the goods or services included in the order have been delivered. “1”
+	   * means “pre-paid”, while “2” means “post-paid”.
+	   * 
+       * @var Integer
+       */
+      var $billingTypeId;
+
+      /**
+       * This will show the word that represents the billing type. It is ignored when you
+       * submit the object. (read-only)
+       * 
+       * @var String
+       */
+      var $billingTypeStr;
+
+      /**
+       * A time stamp with the date and time when this order was originally created.
+       * 
+       * @var Date
+       */
+      var $createDate;
+
+      /**
+       * The id of the user that has created this order.
+       * 
+       * @var Integer
+       */
+      var $createdBy;
+      
+      /**
+       * Currency code. Refer to Appendix A for a list of acceptable values.
+       * 
+       * @var Integer
+       */
+      var $currencyId;
+      
+      /**
+       * A flag that indicates if this record is logically  deleted in the database.
+       * This allows for ‘undo’ of deletions. Valid values are 0 – the record is not
+       * deleted 1 – the record is considered deleted.
+       * 
+       * @var Integer 
+       */
+      var $deleted;
+      
+      /**
+       * Only used for specific Italian business rules.
+       * 
+       * @var Integer
+       */
+      var $dfFm;
+      
+      /**
+       * If this order has a specified due date, this will the the units (days, months, years).
+       * See Appendix A for valid values.
+       * 
+       * @var Integer
+       */
+      var $dueDateUnitId;
+      
+      /**
+       * How many units will be used for the due date.
+       * 
+       * @var Integer
+       */
+      var $dueDateValue;
+      
+      /**
+       * A unique number that identifies this record.
+       * 
+       * @var Integer
+       */
+      var $id;
+      
+      /**
+       * When the order has expiration notification, this field tells when the last one was sent.
+       * 
+       * @var Date
+       */
+      var $lastNotified;
+      
+      /**
+       * The date when this order should generate a new invoice. Meaning that until that date
+       * (and excluding that date), the customer has been invoiced for the service included in
+       * this order.
+       * 
+       * @var Date
+       */
+      var $nextBillableDay;
+      
+      /**
+       * A free text field for your notes.
+       * 
+       * @var String
+       */
+      var $notes;
+      
+      /**
+       * “1” if this order's notes will be included in the invoice, or “0” if not.
+       * 
+       * @var Integer
+       */
+      var $notesInInvoice;
+      
+      /**
+       * What step has been completed in the order
+       * 
+       * @var Integer
+       */
+      var $notificationStep;
+
+      /**
+       * If this order will generate notification as the 'active since' date approaches.
+       * 
+       * @var Integer
+       */
+      var $notify;
+
+      /**
+       *  The order lines belonging to this order. These objects will specify the items
+       *  included in this order with their prices and quantities.
+       *  
+       *  @var array
+       *  @see OrderLineWS
+       */
+      var $orderLines;
+
+      /**
+       * A flag to indicate if this order should generate an invoice on its own.
+       * The default behavior is that many orders can generate one invoice.
+       * 
+       * @var Integer
+       */
+      var $ownInvoice;
+
+      /**
+       *  Indicates the periodicity of this order. In other words, how often this order will
+       *  generate an invoice. Examples of periods are: one time, monthly, weekly, etc. Period
+       *  codes can be seen in jbilling's User Interface under “Orders -> Periods”.
+       *  
+       *  @var Integer
+       */
+      var $period;
+
+      /**
+       * The description of the order period. (read-only)
+       *
+       * @var String
+       */
+      var $periodStr;
+
+      /** 
+       * An order has to be on status ‘Active’ in order to generate invoices. An order usually
+       * starts in active status, and only goes to suspended or finished when the customer
+       * fails to make the required payments. The steps and actions taken due to late payments
+       * are part of the ageing process. See Appendix A for a list of acceptable order status codes.
+       * 
+       * @var Integer
+       */
+      var $statusId;
+
+      /**
+       * This order belongs to the user specified by this field.
+       *
+       * @var Integer
+       */
+      var $userId;
 
       // Added to support jbilling 1_1_2
+
       var $isCurrent;
       var $versionNum;
       var $cycleStarts;
-      var $pricingFields;
+      var $pricingFields; 
       var $statusStr;
       var $timeUnitStr;
 
@@ -74,7 +247,9 @@ class OrderWS {
 	   * Sets the activeSince property for the OrderWS object
 	   * 
 	   * @access public
-	   * @param Date $date The point in time when this order will start being active, reflecting when the customer will be invoiced for the items included.  A null value indicates that the order was active at creation time (see field createDate).
+	   * @param Date $date The point in time when this order will start being active, reflecting when
+	   * 				   the customer will be invoiced for the items included.  A null value indicates
+	   * 				   that the order was active at creation time (see field createDate).
 	   * @return void 
 	   */
 	  public function setActiveSince( $date ) {
@@ -85,7 +260,11 @@ class OrderWS {
 	   * Sets the activeUntil property for the OrderWS object
 	   * 
 	   * @access public
-	   * @param Date $date The point in time when this order stops being active. After this date, the order will stop generating new invoices, indicating that the services included in this order should stop being delivered to the customer. A null value would specify an open-ended order. Such order never expires; it is considered on-going and will require explicit cancellation for it to stop generating invoices.
+	   * @param Date $date The point in time when this order stops being active. After this date, the
+	   * 				   order will stop generating new invoices, indicating that the services included
+	   * 				   in this order should stop being delivered to the customer. A null value would
+	   * 				   specify an open-ended order. Such order never expires; it is considered on-going
+	   * 				   and will require explicit cancellation for it to stop generating invoices.
 	   * @return void 
 	   */
 	  public function setActiveUntil( $date ) {
@@ -96,7 +275,8 @@ class OrderWS {
 	   * Sets the anticipatedPeriods property for the OrderWS object
 	   * 
 	   * @access public
-	   * @param Integer $int How many periods in advance the order should invoice for. Leave with a '0' unless you have configured the system to work with anticipated periods.
+	   * @param Integer $int How many periods in advance the order should invoice for. Leave with a '0'
+	   * 					 unless you have configured the system to work with anticipated periods.
 	   * @return void 
 	   */
 	  public function setAnticipatedPeriods( $int ) {
@@ -107,7 +287,10 @@ class OrderWS {
  	   * Sets the billingTypeId property for the OrderWS object
 	   * 
 	   * @access public
-	   * @param Integer $int Indicates if this order is to be paid for before or after the service is provided. Pre-paid orders are invoiced in advance to the customer, while post-paid are only invoiced once the goods or services included in the order have been delivered. “1” means “pre-paid”, while “2” means “post-paid”. 
+	   * @param Integer $int Indicates if this order is to be paid for before or after the service is provided. 
+	   * 					 Pre-paid orders are invoiced in advance to the customer, while post-paid are only
+	   * 					 invoiced once the goods or services included in the order have been delivered.
+	   * 					 “1” means “pre-paid”, while “2” means “post-paid”. 
 	   * @return void 
 	   */
       public function setBillingTypeId( $id ) {
@@ -118,7 +301,8 @@ class OrderWS {
  	   * Sets the billingTypeStr property for the OrderWS object
 	   * 
 	   * @access public
-	   * @param String $str (read only).This will show the word that represents the billing type. It is ignored when you submit the object.   
+	   * @param String $str This will show the word that represents the billing type. It is
+	   * 					ignored when you submit the object. (read only)   
 	   * @return void 
 	   */
       public function setBillingTypeStr( $str ) {
@@ -162,12 +346,14 @@ class OrderWS {
  	    * Sets the deleted property for the OrderWS object
 	    * 
 	    * @access public
-	    * @param Integer $id A flag that indicates if this record is logically  deleted in the database. This allows for ‘undo’ of deletions. Valid values are 0 – the record is not deleted 1 – the record is considered deleted.   
+	    * @param Integer $id A flag that indicates if this record is logically  deleted in the database. 
+	    * 					 This allows for ‘undo’ of deletions. Valid values are 0 – the record is not
+	    * 					 deleted 1 – the record is considered deleted.   
 	    * @return void
 	    */
        public function setDeleted( $id ) {
-       
-              $this->setDeleted = (int)$id;
+
+              $this->deleted = (int)$id;
        }
        /**
  	    * Sets the dfFm property for the OrderWS object
@@ -184,7 +370,8 @@ class OrderWS {
  	    * Sets the dueDateUbitId property for the OrderWS object
 	    * 
 	    * @access public
-	    * @param Integer $id If this order has a specified due date, this will the the units (days, months, years). See Appendix A for valid values.   
+	    * @param Integer $id If this order has a specified due date, this will the the units (days, months, years).
+	    * 				     See Appendix A for valid values.   
 	    * @return void
 	    */
        public function setDueDateUnitId ( $id ) {
@@ -228,7 +415,9 @@ class OrderWS {
  	    * Sets the nextBillableDay property for the OrderWS object
 	    * 
 	    * @access public
-	    * @param Date $date The date when this order should generate a new invoice. Meaning that until that date (and excluding that date), the customer has been invoiced for the service included in this order.
+	    * @param Date $date The date when this order should generate a new invoice. Meaning that until that date
+	    * 					(and excluding that date), the customer has been invoiced for the service included in
+	    * 					this order.
 	    * @return void
 	    */
 	   public function setNextBillableDay( $date ) {
@@ -283,7 +472,9 @@ class OrderWS {
   	    * Sets the orderLines property for the OrderWS object
 	    * 
 	    * @access public
-	    * @param Array $orderLines The order lines belonging to this order. These objects will specify the items included in this order with their prices and quantities. See the OrderLineWS specification for more information.
+	    * @param Array $orderLines The order lines belonging to this order. These objects will specify the items
+	    * 						   included in this order with their prices and quantities. See the OrderLineWS
+	    * 						   specification for more information.
 	    * @return void
 	    */
        public function setOrderLines( $orderLines ) {
@@ -294,7 +485,8 @@ class OrderWS {
   	    * Sets the invoice property for the OrderWS object
 	    * 
 	    * @access public
-	    * @param Integer $flag A flag to indicate if this order should generate an invoice on its own. The default behavior is that many orders can generate one invoice.
+	    * @param Integer $flag A flag to indicate if this order should generate an invoice on its own. The default
+	    * 					   behavior is that many orders can generate one invoice.
 	    * @return void
 	    */
 	   public function setInvoice( $flag ) {
@@ -305,7 +497,9 @@ class OrderWS {
   	    * Sets the period property for the OrderWS object
 	    * 
 	    * @access public
-	    * @param Integer $int Indicates the periodicity of this order. In other words, how often this order will generate an invoice. Examples of periods are: one time, monthly, weekly, etc. Period codes can be seen in jbilling's User Interface under “Orders -> Periods”.
+	    * @param Integer $int Indicates the periodicity of this order. In other words, how often this order will
+	    * 					  generate an invoice. Examples of periods are: one time, monthly, weekly, etc. Period
+	    * 					  codes can be seen in jbilling's User Interface under “Orders -> Periods”.
 	    * @return void
 	    */
        public function setPeriod( $int ) {
@@ -327,7 +521,10 @@ class OrderWS {
   	    * Sets the statusId property for the OrderWS object
 	    * 
 	    * @access public
-	    * @param Integer $id An order has to be on status ‘Active’ in order to generate invoices. An order usually starts in active status, and only goes to suspended or finished when the customer fails to make the required payments. The steps and actions taken due to late payments are part of the ageing process. See Appendix A for a list of acceptable order status codes. 
+	    * @param Integer $id An order has to be on status ‘Active’ in order to generate invoices. An order usually starts
+	    * 				     in active status, and only goes to suspended or finished when the customer fails to make the
+	    * 					 required payments. The steps and actions taken due to late payments are part of the ageing
+	    * 					 process. See Appendix A for a list of acceptable order status codes. 
 	    * @return void
 	    */
        public function setStatusId( $id ) {
@@ -349,7 +546,8 @@ class OrderWS {
 	   * Gets the activeSince property for the OrderWS object
 	   * 
 	   * @access public
-	   * @return Date The point in time when this order will start being active, reflecting when the customer will be invoiced for the items included.  A null value indicates that the order was active at creation time (see field createDate).
+	   * @return Date The point in time when this order will start being active, reflecting when the customer will be invoiced
+	   * 			  for the items included.  A null value indicates that the order was active at creation time (see field createDate).
 	   */
 	  public function getActiveSince() {
 
@@ -359,7 +557,10 @@ class OrderWS {
 	   * Gets the activeUntil property for the OrderWS object
 	   * 
 	   * @access public
-	   * @return Date The point in time when this order stops being active. After this date, the order will stop generating new invoices, indicating that the services included in this order should stop being delivered to the customer. A null value would specify an open-ended order. Such order never expires; it is considered on-going and will require explicit cancellation for it to stop generating invoices.
+	   * @return Date The point in time when this order stops being active. After this date, the order will stop generating new
+	   * 			  invoices, indicating that the services included in this order should stop being delivered to the customer.
+	   * 			  A null value would specify an open-ended order. Such order never expires; it is considered on-going and
+	   * 			  will require explicit cancellation for it to stop generating invoices.
 	   */
 	  public function getActiveUntil() {
 	  	
@@ -369,7 +570,8 @@ class OrderWS {
 	   * Gets the anticipatedPeriods property for the OrderWS object
 	   * 
 	   * @access public
-	   * @return Integer How many periods in advance the order should invoice for. Leave with a '0' unless you have configured the system to work with anticipated periods.
+	   * @return Integer How many periods in advance the order should invoice for. Leave with a '0' unless you have configured
+	   * 				 the system to work with anticipated periods.
 	   */
 	  public function getAnticipatedPeriods() {
 	   	
@@ -379,7 +581,9 @@ class OrderWS {
  	   * Gets the billingTypeId property for the OrderWS object
 	   * 
 	   * @access public
-	   * @return Integer Indicates if this order is to be paid for before or after the service is provided. Pre-paid orders are invoiced in advance to the customer, while post-paid are only invoiced once the goods or services included in the order have been delivered. “1” means “pre-paid”, while “2” means “post-paid”. 
+	   * @return Integer Indicates if this order is to be paid for before or after the service is provided. Pre-paid orders are
+	   * 				 invoiced in advance to the customer, while post-paid are only invoiced once the goods or services included
+	   * 				 in the order have been delivered. “1” means “pre-paid”, while “2” means “post-paid”. 
 	   */
       public function getBillingTypeId() {
 
@@ -429,11 +633,12 @@ class OrderWS {
  	    * Gets the deleted property for the OrderWS object
 	    * 
 	    * @access public
-	    * @return Integer A flag that indicates if this record is logically  deleted in the database. This allows for ‘undo’ of deletions. Valid values are 0 – the record is not deleted 1 – the record is considered deleted.   
+	    * @return Integer A flag that indicates if this record is logically  deleted in the database. This allows for ‘undo’ of deletions.
+	    * 				  Valid values are 0 – the record is not deleted 1 – the record is considered deleted.   
 	    */
        public function getDeleted() {
        
-              return $this->getDeleted;
+              return $this->deleted;
        }
        /**
  	    * Gets the dfFm property for the OrderWS object
@@ -489,7 +694,8 @@ class OrderWS {
  	    * Gets the nextBillableDay property for the OrderWS object
 	    * 
 	    * @access public
-	    * @return Date The date when this order should generate a new invoice. Meaning that until that date (and excluding that date), the customer has been invoiced for the service included in this order.
+	    * @return Date The date when this order should generate a new invoice. Meaning that until that date (and excluding that date), the
+	    * 			   customer has been invoiced for the service included in this order.
 	    */
 	   public function nextBillableDay() {
 	    
@@ -539,7 +745,8 @@ class OrderWS {
   	    * Gets the orderLines property for the OrderWS object
 	    * 
 	    * @access public
-	    * @return Array The order lines belonging to this order. These objects will specify the items included in this order with their prices and quantities. See the OrderLineWS specification for more information.
+	    * @return Array The order lines belonging to this order. These objects will specify the items included in this order with
+	    * 				their prices and quantities. See the OrderLineWS specification for more information.
 	    */
        public function getOrderLines() {
        	
@@ -549,7 +756,8 @@ class OrderWS {
   	    * Gets the invoice property for the OrderWS object
 	    * 
 	    * @access public
-	    * @return Integer A flag to indicate if this order should generate an invoice on its own. The default behavior is that many orders can generate one invoice.
+	    * @return Integer A flag to indicate if this order should generate an invoice on its own. The default behavior is that
+	    * 				  many orders can generate one invoice.
 	    */
 	   public function getInvoice() {
 	   	
@@ -559,7 +767,9 @@ class OrderWS {
   	    * Gets the period property for the OrderWS object
 	    * 
 	    * @access public
-	    * @return Integer Indicates the periodicity of this order. In other words, how often this order will generate an invoice. Examples of periods are: one time, monthly, weekly, etc. Period codes can be seen in jbilling's User Interface under “Orders -> Periods”.
+	    * @return Integer Indicates the periodicity of this order. In other words, how often this order will generate an invoice.
+	    * 				  Examples of periods are: one time, monthly, weekly, etc. Period codes can be seen in jbilling's User
+	    * 				  Interface under “Orders -> Periods”.
 	    */
        public function getPeriod() {
 
@@ -579,7 +789,10 @@ class OrderWS {
   	    * Gets the statusId property for the OrderWS object
 	    * 
 	    * @access public
-	    * @return Integer An order has to be on status ‘Active’ in order to generate invoices. An order usually starts in active status, and only goes to suspended or finished when the customer fails to make the required payments. The steps and actions taken due to late payments are part of the ageing process. See Appendix A for a list of acceptable order status codes. 
+	    * @return Integer An order has to be on status ‘Active’ in order to generate invoices. An order usually starts in active
+	    * 				  status, and only goes to suspended or finished when the customer fails to make the required payments. The
+	    * 				  steps and actions taken due to late payments are part of the ageing process. See Appendix A for a list of
+	    * 				  acceptable order status codes. 
 	    */
        public function getStatusId() {
 

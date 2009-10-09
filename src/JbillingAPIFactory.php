@@ -20,68 +20,93 @@
  */
 
 /**
-  * JbillingAPIFactory
-  * @author Jeremy Hahn
-  * @version 1.0
-  * @copyright Make A Byte, inc
-  * @package com.makeabyte.contrib.jbilling.php
-  */
+ * JbillingAPIFactory
+ * @author Jeremy Hahn
+ * @version 2.0
+ * @copyright Make A Byte, inc
+ * @package com.makeabyte.contrib.jbilling.php
+ */
 
-// Required SOAP libraries
-require_once( 'SOAP/Client.php' );
-require_once( 'SOAP/Value.php' );
+define( 'JBILLINGAPI_TYPE_CXF', 'CXF' );
+define( 'JBILLINGAPI_TYPE_HESSIAN', 'HESSIAN' );
 
-// Required JbillingAPIFactory classes
-require_once( 'JbillingAPI.php' );
-require_once( 'JbillingAPIException.php' );
-require_once( 'AchDTO.php' );
-require_once( 'ContactWS.php' );
-require_once( 'CreateResponseWS.php' );
-require_once( 'CreditCardDTO.php' );
-require_once( 'InvoiceLineDTO.php' );
-require_once( 'InvoiceWS.php' );
-require_once( 'ItemDTOEx.php' );
-require_once( 'OrderLineWS.php' );
-require_once( 'OrderWS.php' );
-require_once( 'PaymentAuthorizationDTO.php' );
-require_once( 'PaymentAuthorizationDTOEx.php' );
-require_once( 'PaymentInfoChequeDTO.php' );
-require_once( 'PaymentWS.php' );
-require_once( 'UserTransitionResponseWS.php' );
-require_once( 'UserWS.php' );
-require_once( 'WSDLAPI.php' );
-require_once( 'JavaDouble.php' );
+require_once 'JbillingAPI.php';
+require_once 'JbillingAPIException.php';
+require_once 'AchDTO.php';
+require_once 'ContactWS.php';
+require_once 'CreateResponseWS.php';
+require_once 'CreditCardDTO.php';
+require_once 'InvoiceLineDTO.php';
+require_once 'InvoiceWS.php';
+require_once 'ItemDTOEx.php';
+require_once 'OrderLineWS.php';
+require_once 'OrderWS.php';
+require_once 'PaymentAuthorizationDTO.php';
+require_once 'PaymentAuthorizationDTOEx.php';
+require_once 'PaymentInfoChequeDTO.php';
+require_once 'PaymentWS.php';
+require_once 'UserTransitionResponseWS.php';
+require_once 'UserWS.php';
+require_once 'ItemPriceDTOEx.php';
+require_once 'ValidatePurchaseWS.php';
 
-class JbillingAPIFactory {
+abstract class JbillingAPIFactory {
 
-      private static $api = null;
+      	 private static $api = null;
 
-      private function __construct() { }
+      	 private function __construct() { }
+      	 private function __clone() { }
 
-      /**
-	   * Create the getAPI method which returns a singleton object of the WSDLAPI
-	   * NOTE: You can modify this routine to automatically retrieve your Jbilling API connection parameters or add another
-	   *       API type, such as creating another API provider which uses PHP/Java integration performing native calls to EJBAPI
-	   *       rather than using AXIS WSDL.
-	   * 
-	   * @access public
-	   * @param Integer $url The uniform resource locator of the jbilling WSDL provider
-	   * @param String $username The username of the jbilling API account to use for WSDL connection
-	   * @param String $password The password used to authenticate the jbilling WSDL API account
-	   * @return JbillingAPIFactory A singleton instance of JbillingAPIFactory which should be a handle to one of the supported jbilling PHP wrapper API providers
-	   */
-	  public static function getAPI( $url, $username, $password ) {
+	     /**
+		  * Factory method responsible for returning a jBilling API instance.
+		  * 
+		  * @access public
+		  * @param String $endpoint The location of the endpoint
+		  * @param String $username The jBilling endpoint username
+		  * @param String $password The jBilling endpoint password
+		  * @param String $type The jBilling API type (CXF|HESSIAN).
+		  * @return jBilling API instance
+		  */
+		 public static function getAPI( $endpoint, $username, $password, $type = JBILLINGAPI_TYPE_CXF ) {
 
-             // Create a new instance of the WSDLAPI provider
-             if( self::$api == null )             
-                 self::$api = new WSDLAPI( $url, $username, $password );
+		  		try {
+		  		 	    if( self::$api == null ) {
 
-             // Catch SOAP_Faults / JbillingAPIExceptions throws by the WSDL provider
-             if( self::$api instanceof SOAP_Fault )
-                 throw new JbillingAPIException( self::$api->message );
+			            	switch( $type ) {
 
-             // Return an instance of the WSDLAPI provider object 
-             return self::$api;
-	  }
+				             	    case JBILLINGAPI_TYPE_CXF:
+				             	     	 require_once 'CXFAPI.php';
+			             	 		 	 self::$api = new CXFAPI( $endpoint, array( 'trace' => 1, 'login' => $username, 'password' => $password ) );
+			             	 		 	 break;
+
+			             	 		case JBILLINGAPI_TYPE_HESSIAN:
+
+			             	 			 throw new JbillingAPIException( 'Hessian API implementation is not YET supported. Use CXF instead.' );
+
+			             	 		 	 require_once 'HessianAPI.php';
+			             	 		 	 self::$api = new HessianAPI( $endpoint, $username, $password );
+			             	 		 	 break;
+
+			             	 		default:
+			             	 		 	throw new JbillingAPIException( 'Invalid API type \'' . $type . '\'.' );
+			             	}
+			            }
+
+			            return self::$api;
+		  		}
+		  		catch( SoapFault $e ) {
+
+		  		 	   throw new JbillingAPIException( $e );
+		  		}
+		  		catch( Exception $e ) {
+
+		  		 	   throw new JbillingAPIException( $e->getMessage(), $e->getCode() );
+		  		}
+		  }
+
+		  abstract function getLastRequest();
+		  abstract function getLastRequestHeaders();
+		  abstract function getLastResponse();
+		  abstract function getLastResponseHeaders();
 }
 ?>

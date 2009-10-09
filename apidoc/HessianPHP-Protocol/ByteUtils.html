@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class ByteUtils</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class ByteUtils</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This is a helper class designed to work with byte conversion and representation of numbers</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Manolo Gómez</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2004</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---HessianPHP---dist---Protocol.php.html">/lib/HessianPHP/dist/Protocol.php</a> (line <span class="field">45</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getFloatBytes" title="details" class="method-name">getFloatBytes</a>
+											(<span class="var-type">double</span>&nbsp;<span class="var-name">$number</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getIntBytes" title="details" class="method-name">getIntBytes</a>
+											(<span class="var-type">long</span>&nbsp;<span class="var-name">$number</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$precision</span> = <span class="var-default">32</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isLittleEndian" title="details" class="method-name">isLittleEndian</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#orderedByteString" title="details" class="method-name">orderedByteString</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetFloatBytes" id="getFloatBytes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getFloatBytes</span> (line <span class="line-number">102</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a string with the byte representation of a IEEE 754 double in  64 bit precision. Works fine between PHP clients and servers but it uses  a machine dependent byte packing representation (pack format &quot;d&quot;).</p>
+<p class="description"><p><strong>WARNING:</strong> Due to incompatible double formats among different machines, this function  is not guaranteed to return the number with extreme accuracy, specially with periodic fractions  such as 1.3333... Take this in account.<br /></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> byte representation</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getFloatBytes
+		</span>
+					(<span class="var-type">double</span>&nbsp;<span class="var-name">$number</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">double</span>
+				<span class="var-name">$number</span><span class="var-description">: number number to be transformed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIntBytes" id="getIntBytes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getIntBytes</span> (line <span class="line-number">70</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates big endian byte representation of a number with a defined  precision, 16 or 64 bits for example, default 32 bits.<br /></p>
+<p class="description"><p>This function is equivalent to do the transformation by hand with a fixed  bit precision, as in (for a 32 bit representation):<br /></p><p><div class="src-code"><ol><li><div class="src-line">&lt;<span class="src-id">BR</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$b32&nbsp;</span>=&nbsp;<span class="src-var">$value&nbsp;</span>&gt;&gt;&nbsp;<span class="src-num">24</span><span class="src-sym">;</span>&lt;<span class="src-id">BR</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$b24&nbsp;</span>=&nbsp;<span class="src-sym">(</span><span class="src-var">$value&nbsp;</span>&gt;&gt;&nbsp;<span class="src-num">16</span><span class="src-sym">)&nbsp;</span><span class="src-sym">&amp;&nbsp;</span><span class="src-num">0x000000FF</span><span class="src-sym">;</span>&lt;<span class="src-id">BR</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$b16&nbsp;</span>=&nbsp;<span class="src-sym">(</span><span class="src-var">$value&nbsp;</span>&gt;&gt;&nbsp;<span class="src-num">8</span><span class="src-sym">)&nbsp;</span><span class="src-sym">&amp;&nbsp;</span><span class="src-num">0x000000FF</span><span class="src-sym">;</span>&lt;<span class="src-id">BR</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$b8&nbsp;</span>=&nbsp;<span class="src-var">$value&nbsp;</span><span class="src-sym">&amp;&nbsp;</span><span class="src-num">0x000000FF</span><span class="src-sym">;</span>&lt;<span class="src-id">BR</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$bytes&nbsp;</span>.=&nbsp;<a href="http://www.php.net/pack">pack</a><span class="src-sym">(</span><span class="src-str">'c'</span><span class="src-sym">,</span><span class="src-var">$b32</span><span class="src-sym">)</span><span class="src-sym">;</span>&lt;<span class="src-id">BR</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$bytes&nbsp;</span>.=&nbsp;<a href="http://www.php.net/pack">pack</a><span class="src-sym">(</span><span class="src-str">'c'</span><span class="src-sym">,</span><span class="src-var">$b24</span><span class="src-sym">)</span><span class="src-sym">;</span>&lt;<span class="src-id">BR</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$bytes&nbsp;</span>.=&nbsp;<a href="http://www.php.net/pack">pack</a><span class="src-sym">(</span><span class="src-str">'c'</span><span class="src-sym">,</span><span class="src-var">$b16</span><span class="src-sym">)</span><span class="src-sym">;</span>&lt;<span class="src-id">BR</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$bytes&nbsp;</span>.=&nbsp;<a href="http://www.php.net/pack">pack</a><span class="src-sym">(</span><span class="src-str">'c'</span><span class="src-sym">,</span><span class="src-var">$b8</span><span class="src-sym">)</span><span class="src-sym">;</span>&lt;<span class="src-id">BR</span>&gt;</div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> byte representation of long number</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getIntBytes
+		</span>
+					(<span class="var-type">long</span>&nbsp;<span class="var-name">$number</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$precision</span> = <span class="var-default">32</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">long</span>
+				<span class="var-name">$number</span><span class="var-description">: number number to be transformed</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$precision</span><span class="var-description">: precision precision</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisLittleEndian" id="isLittleEndian"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isLittleEndian</span> (line <span class="line-number">121</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Test if this machine is a little endian architecture<br /></p>
+<p class="description"><p>Based in code from Open Sound Control (OSC) Client Library for PHP<br />  Author: Andy W Schmeder &amp;lt;andy@a2hd.com&amp;gt;<br />  Copyright 2003</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> is little endian?</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isLittleEndian
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodorderedByteString" id="orderedByteString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">orderedByteString</span> (line <span class="line-number">142</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a sequence of bytes in big endian order, it orders the string depending  on machine architecture (big endian or little endian).<br /></p>
+<p class="description"><p>Based in code from Open Sound Control (OSC) Client Library for PHP<br />  Author: Andy W Schmeder &amp;lt;andy@a2hd.com&amp;gt;<br />  Copyright 2003</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> big endian ordered sequence of bytes</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			orderedByteString
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: string sequence of bytes to order</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 09 Oct 2009 14:22:36 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

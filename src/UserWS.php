@@ -52,6 +52,70 @@ class UserWS {
       var $userId;                          // A unique number that identifies the customer
       var $userName;                        // Identifies the user during login
 
+      // Added in jBilling 2.0
+
+      /**
+       * The type of dynamic balance for this user. Refer to Appendix A for acceptable values.
+       * 
+       * @var Integer
+       */
+      public $balanceType;
+      
+      /**
+       * Lists any blacklist matches for this user. See the “jBilling User Guide” for more
+       * information on blacklists.
+       * 
+       * @var String[]
+       */
+      public $blacklistMatches;
+
+      /**
+       * The identifiers of any sub-accounts for this user.
+       * 
+       * @var Integer
+       */
+      public $childIds;
+
+      /**
+       * The credit limit. Only valid if balanceType is of credit limit type.
+       *  
+       * @var Double
+       */
+      public $creditLimit;
+
+      /**
+       * The dynamic balance. If balanceType is credit limit, this represents the amount of
+       * credit used on the account. If balanceType is pre paid, this represents the pre paid
+       * balance remaining.
+       * 
+       * @var Double
+       */
+      public $dynamicBalance;
+
+      /**
+       * The id of the main order for this customer. This is the order that sets the customer's
+       * billing cycle for the management of 'current' orders'. Current orders gather usage.
+       * You can set this value to an order and call 'updateUser' to set a new order as the main
+       * order.
+       *  
+       * @var Integer
+       */
+      public $mainOrderId;
+
+      /**
+       * A real-time calculated owing balance.
+       * 
+       * @var Double
+       */
+      public $owingBalance;
+
+      /**
+       * “true” if the user id is blacklisted. See the “jBilling User Guide” for more information on blacklists.
+       *  
+       * @var Boolean
+       */
+      public $userIdBlackListed;
+
       /**
        * The UserWS constructor
        * 
@@ -521,6 +585,86 @@ class UserWS {
 	  public function getUserName() {
 	  	
 	  	     return $this->userName;
+	  }
+	  
+	  public function setBalancetype( $value ) {
+
+		     $this->balancetype = $value;
+	  }
+
+	  public function setBlacklistmatches( $value ) {
+
+			 $this->blacklistmatches = $value;
+	  }
+
+	  public function setChildids( $value ) {
+
+			 $this->childids = $value;
+	  }
+
+	  public function setCreditlimit( $value ) {
+
+			 $this->creditlimit = $value;
+	  }
+
+	  public function setDynamicbalance( $value ) {
+
+			 $this->dynamicbalance = $value;
+	  }
+
+	  public function setMainorderid( $value ) {
+
+			 $this->mainorderid = $value;
+  	  }
+
+	  public function setOwingbalance( $value ) {
+
+			 $this->owingbalance = $value;
+	  }
+
+	  public function setUseridblacklisted( $value ) {
+
+			 $this->useridblacklisted = $value;
+	  }
+
+	  public function getBalancetype() {
+
+			 return $this->balancetype;
+	  }
+
+	  public function getBlacklistmatches() {
+
+			 return $this->blacklistmatches;
+	  }
+
+	  public function getChildids() {
+
+			 return $this->childids;
+	  }
+
+	  public function getCreditlimit() {
+
+			 return $this->creditlimit;
+	  }
+
+	  public function getDynamicbalance() {
+
+			 return $this->dynamicbalance;
+	  }
+
+	  public function getMainorderid() {
+
+			 return $this->mainorderid;
+	  }
+
+	  public function getOwingbalance() {
+
+			 return $this->owingbalance;
+	  }
+
+	  public function getUseridblacklisted() {
+
+			 return $this->useridblacklisted;
 	  }
 }
 ?>

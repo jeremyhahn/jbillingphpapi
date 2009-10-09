@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class HessianParser</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class HessianParser</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">&lt;BLOCKQUOTE&gt;  Hessian protocol parser, inspired and partially based on hessianlib.py by Caucho.</p>
+<p class="description"><p><br />  TODO:  <ul><li>Handling of 'headers'</li></ul>  &lt;/BLOCKQUOTE&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Manolo Gómez</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2004</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---HessianPHP---dist---Protocol.php.html">/lib/HessianPHP/dist/Protocol.php</a> (line <span class="field">225</span>)
+		</p>
+		
+				
+		<pre><a href="../HessianPHP-Protocol/HessianProtocolHandler.html">HessianProtocolHandler</a>
+   |
+   --HessianParser</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$lastCode" title="details" class="var-name">$lastCode</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#endStream" title="details" class="method-name">endStream</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parseCall" title="details" class="method-name">parseCall</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parseFault" title="details" class="method-name">&amp;parseFault</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parseList" title="details" class="method-name">&amp;parseList</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parseMap" title="details" class="method-name">&amp;parseMap</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#parseObject" title="details" class="method-name">&amp;parseObject</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parseReply" title="details" class="method-name">parseReply</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#readBinary" title="details" class="method-name">readBinary</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#readLong" title="details" class="method-name">readLong</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#readString" title="details" class="method-name">readString</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$lastCode" id="$lastCode"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$lastCode</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">226</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html">HessianProtocolHandler</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$dateProvider">HessianProtocolHandler::$dateProvider</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$error">HessianProtocolHandler::$error</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$len">HessianProtocolHandler::$len</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$pos">HessianProtocolHandler::$pos</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$refs">HessianProtocolHandler::$refs</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$stream">HessianProtocolHandler::$stream</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$typemap">HessianProtocolHandler::$typemap</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodendStream" id="endStream"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">endStream</span> (line <span class="line-number">329</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			endStream
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparseCall" id="parseCall"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseCall</span> (line <span class="line-number">316</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parseCall
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparseFault" id="parseFault"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseFault</span> (line <span class="line-number">348</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			&amp;parseFault
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparseList" id="parseList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseList</span> (line <span class="line-number">395</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			&amp;parseList
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparseMap" id="parseMap"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseMap</span> (line <span class="line-number">369</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			&amp;parseMap
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparseObject" id="parseObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseObject</span> (line <span class="line-number">249</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main parsing function that reads the head code from the stream and returns the appropriate PHP value  Thanks to Radu-Adrian Popescu for his patch to 'long' and 'date' deserializing.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> parsed value</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			&amp;parseObject
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$code</span><span class="var-description">: code Hessian object code</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseReply" id="parseReply"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseReply</span> (line <span class="line-number">337</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parseReply
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodreadBinary" id="readBinary"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">readBinary</span> (line <span class="line-number">456</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			readBinary
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodreadLong" id="readLong"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">readLong</span> (line <span class="line-number">417</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			readLong
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodreadString" id="readString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">readString</span> (line <span class="line-number">424</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			readString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html">HessianProtocolHandler</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodHessianProtocolHandler">HessianProtocolHandler::HessianProtocolHandler()</a></span><br>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodclearRefs">HessianProtocolHandler::clearRefs()</a></span><br>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodsetDateProvider">HessianProtocolHandler::setDateProvider()</a></span><br>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodsetStream">HessianProtocolHandler::setStream()</a></span><br>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodsetTypeMap">HessianProtocolHandler::setTypeMap()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 09 Oct 2009 14:22:36 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

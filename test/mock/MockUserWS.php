@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * @package com.makeabyte.contrib.jbilling.php.test
+ * @package com.makeabyte.contrib.jbilling.php.test.mock
  */
 
 class MockUserWS extends MockObject {
@@ -26,14 +26,18 @@ class MockUserWS extends MockObject {
 	  public function MockUserWS() {
 
 	  	     $UserWS = new UserWS();
-	  	     
-	  	     $UserWS->setUserName( "phpUnitTest" );
-			 $UserWS->setPassword( "jbilling-php-api-007" );
-			 $UserWS->setLanguageId( 1 ); // English
-			 $UserWS->setMainRoleId( 5 ); // Customer
-			 $UserWS->setRole( "Customer" );
-			 $UserWS->setStatusId( 1 ); // Active
-			 $UserWS->setSubscriberStatusId( 1 ); // Pre-paid
+
+	  	     $UserWS->setUserId( USER_ID );
+	  	     $UserWS->setUserName( USER_USERNAME );
+			 $UserWS->setPassword( USER_PASSWORD );
+			 $UserWS->setLanguageId( USER_LANGUAGEID ); // English
+			 $UserWS->setMainRoleId( USER_MAINROLEID ); // Customer
+			 $UserWS->setRole( USER_ROLE );
+			 $UserWS->setIsParent( USER_ISPARENT );
+			 $UserWS->setStatusId( USER_STATUSID ); // Active
+			 $UserWS->setCurrencyId( USER_CURRENCYID );
+			 $UserWS->setBalanceType( USER_BALANCETYPE ); // ??
+			 $UserWS->setSubscriberStatusId( USER_SUBSCRIBERSTATUSID ); // Pre-paid
 
 			 $this->UserWS = $UserWS;
 	  }
@@ -41,6 +45,11 @@ class MockUserWS extends MockObject {
 	  public function getObject() {
 
 			 return $this->UserWS;
+	  }
+
+	  public function setUserId( $id ) {
+
+	  		 $this->UserWS->setUserId( $id );
 	  }
 
 	  public function setContact( ContactWS $ContactWS ) {

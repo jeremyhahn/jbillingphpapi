@@ -1,0 +1,2567 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CXFAPI</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CXFAPI</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html">JbillingAPI</a></li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">jBilling CXFAPI (Apache CXF) PHP wrapper</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Jeremy Hahn</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">copyright:</span> Make A Byte</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_src---CXFAPI.php.html">/src/CXFAPI.php</a> (line <span class="field">30</span>)
+		</p>
+		
+				
+		<pre>SoapClient
+   |
+   --CXFAPI</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#CXFAPI" title="details" class="method-name">CXFAPI</a>
+											(<span class="var-type">$endpoint</span>&nbsp;<span class="var-name">$endpoint</span>, [<span class="var-type">$opts</span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">array()</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/applyPaymentResponse.html">applyPaymentResponse</a></span>
+										<a href="#applyPayment" title="details" class="method-name">applyPayment</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>, <span class="var-type">$invoiceId</span>&nbsp;<span class="var-name">$invoiceId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/authenticateResponse.html">authenticateResponse</a></span>
+										<a href="#authenticate" title="details" class="method-name">authenticate</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$password</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createResponse.html">createResponse</a></span>
+										<a href="#create" title="details" class="method-name">create</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createInvoiceResponse.html">createInvoiceResponse</a></span>
+										<a href="#createInvoice" title="details" class="method-name">createInvoice</a>
+											(<span class="var-type">$userId</span>&nbsp;<span class="var-name">$userId</span>, [<span class="var-type">$onlyRecurring</span>&nbsp;<span class="var-name">$onlyRecurring</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createItemResponse.html">createItemResponse</a></span>
+										<a href="#createItem" title="details" class="method-name">createItem</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>&nbsp;<span class="var-name">$dto</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createOrderResponse.html">createOrderResponse</a></span>
+										<a href="#createOrder" title="details" class="method-name">createOrder</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createOrderAndInvoiceResponse.html">createOrderAndInvoiceResponse</a></span>
+										<a href="#createOrderAndInvoice" title="details" class="method-name">createOrderAndInvoice</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createOrderPreAuthorizeResponse.html">createOrderPreAuthorizeResponse</a></span>
+										<a href="#createOrderPreAuthorize" title="details" class="method-name">createOrderPreAuthorize</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createUserResponse.html">createUserResponse</a></span>
+										<a href="#createUser" title="details" class="method-name">createUser</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$newUser</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/deleteInvoiceResponse.html">deleteInvoiceResponse</a></span>
+										<a href="#deleteInvoice" title="details" class="method-name">deleteInvoice</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$invoiceId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/deleteOrderResponse.html">deleteOrderResponse</a></span>
+										<a href="#deleteOrder" title="details" class="method-name">deleteOrder</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$orderId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/deleteUserResponse.html">deleteUserResponse</a></span>
+										<a href="#deleteUser" title="details" class="method-name">deleteUser</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$userID</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getAllItemsResponse.html">getAllItemsResponse</a></span>
+										<a href="#getAllItems" title="details" class="method-name">getAllItems</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getCurrentOrderResponse.html">getCurrentOrderResponse</a></span>
+										<a href="#getCurrentOrder" title="details" class="method-name">getCurrentOrder</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Date</span>&nbsp;<span class="var-name">$date</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getInvoicesByDateResponse.html">getInvoicesByDateResponse</a></span>
+										<a href="#getInvoicesByDate" title="details" class="method-name">getInvoicesByDate</a>
+											(<span class="var-type">Date</span>&nbsp;<span class="var-name">$since</span>, <span class="var-type">Date</span>&nbsp;<span class="var-name">$until</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getInvoiceWSResponse.html">getInvoiceWSResponse</a></span>
+										<a href="#getInvoiceWS" title="details" class="method-name">getInvoiceWS</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$invoiceId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getItemResponse.html">getItemResponse</a></span>
+										<a href="#getItem" title="details" class="method-name">getItem</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemId</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span> = <span class="var-default">null</span>], [<span class="var-type">PricingField[]</span>&nbsp;<span class="var-name">$pricingFields</span> = <span class="var-default">array()</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastInvoicesResponse.html">getLastInvoicesResponse</a></span>
+										<a href="#getLastInvoices" title="details" class="method-name">getLastInvoices</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastInvoicesByItemTypeResponse.html">getLastInvoicesByItemTypeResponse</a></span>
+										<a href="#getLastInvoicesByItemType" title="details" class="method-name">getLastInvoicesByItemType</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemTypeId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastOrdersResponse.html">getLastOrdersResponse</a></span>
+										<a href="#getLastOrders" title="details" class="method-name">getLastOrders</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastOrdersByItemTypeResponse.html">getLastOrdersByItemTypeResponse</a></span>
+										<a href="#getLastOrdersByItemType" title="details" class="method-name">getLastOrdersByItemType</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemTypeId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastPaymentsResponse.html">getLastPaymentsResponse</a></span>
+										<a href="#getLastPayments" title="details" class="method-name">getLastPayments</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastRequest" title="details" class="method-name">getLastRequest</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastRequestHeaders" title="details" class="method-name">getLastRequestHeaders</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastResponse" title="details" class="method-name">getLastResponse</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastResponseHeaders" title="details" class="method-name">getLastResponseHeaders</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestInvoiceResponse.html">getLatestInvoiceResponse</a></span>
+										<a href="#getLatestInvoice" title="details" class="method-name">getLatestInvoice</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestInvoiceByItemTypeResponse.html">getLatestInvoiceByItemTypeResponse</a></span>
+										<a href="#getLatestInvoiceByItemType" title="details" class="method-name">getLatestInvoiceByItemType</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemTypeId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestOrderResponse.html">getLatestOrderResponse</a></span>
+										<a href="#getLatestOrder" title="details" class="method-name">getLatestOrder</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestOrderByItemTypeResponse.html">getLatestOrderByItemTypeResponse</a></span>
+										<a href="#getLatestOrderByItemType" title="details" class="method-name">getLatestOrderByItemType</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemTypeId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestPaymentResponse.html">getLatestPaymentResponse</a></span>
+										<a href="#getLatestPayment" title="details" class="method-name">getLatestPayment</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getOrderResponse.html">getOrderResponse</a></span>
+										<a href="#getOrder" title="details" class="method-name">getOrder</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$orderId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getOrderByPeriodResponse.html">getOrderByPeriodResponse</a></span>
+										<a href="#getOrderByPeriod" title="details" class="method-name">getOrderByPeriod</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userID</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$periodId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getOrderLineResponse.html">getOrderLineResponse</a></span>
+										<a href="#getOrderLine" title="details" class="method-name">getOrderLine</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$orderLineId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getPaymentResponse.html">getPaymentResponse</a></span>
+										<a href="#getPayment" title="details" class="method-name">getPayment</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$paymentId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserContactsWSResponse.html">getUserContactsWSResponse</a></span>
+										<a href="#getUserContactsWS" title="details" class="method-name">getUserContactsWS</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/getUserContactsWS.html">getUserContactsWS</a></span>&nbsp;<span class="var-name">$parameters</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserIdResponse.html">getUserIdResponse</a></span>
+										<a href="#getUserId" title="details" class="method-name">getUserId</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$username</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserItemsByCategoryResponse.html">getUserItemsByCategoryResponse</a></span>
+										<a href="#getUserItemsByCategory" title="details" class="method-name">getUserItemsByCategory</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$categoryId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByCreditCardResponse.html">getUsersByCreditCardResponse</a></span>
+										<a href="#getUsersByCreditCard" title="details" class="method-name">getUsersByCreditCard</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByCreditCard.html">getUsersByCreditCard</a></span>&nbsp;<span class="var-name">$parameters</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByCustomFieldResponse.html">getUsersByCustomFieldResponse</a></span>
+										<a href="#getUsersByCustomField" title="details" class="method-name">getUsersByCustomField</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$typeId</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByStatusResponse.html">getUsersByStatusResponse</a></span>
+										<a href="#getUsersByStatus" title="details" class="method-name">getUsersByStatus</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByStatus.html">getUsersByStatus</a></span>&nbsp;<span class="var-name">$parameters</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersInStatusResponse.html">getUsersInStatusResponse</a></span>
+										<a href="#getUsersInStatus" title="details" class="method-name">getUsersInStatus</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$statusId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersNotInStatusResponse.html">getUsersNotInStatusResponse</a></span>
+										<a href="#getUsersNotInStatus" title="details" class="method-name">getUsersNotInStatus</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$statusId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserTransitionsResponse.html">getUserTransitionsResponse</a></span>
+										<a href="#getUserTransitions" title="details" class="method-name">getUserTransitions</a>
+											(<span class="var-type">Date</span>&nbsp;<span class="var-name">$to</span>, <span class="var-type">Date</span>&nbsp;<span class="var-name">$from</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserTransitionsAfterIdResponse.html">getUserTransitionsAfterIdResponse</a></span>
+										<a href="#getUserTransitionsAfterId" title="details" class="method-name">getUserTransitionsAfterId</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserWSResponse.html">getUserWSResponse</a></span>
+										<a href="#getUserWS" title="details" class="method-name">getUserWS</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/isUserSubscribedToResponse.html">isUserSubscribedToResponse</a></span>
+										<a href="#isUserSubscribedTo" title="details" class="method-name">isUserSubscribedTo</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/payInvoiceResponse.html">payInvoiceResponse</a></span>
+										<a href="#payInvoice" title="details" class="method-name">payInvoice</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$invoiceId</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/processPaymentResponse.html">processPaymentResponse</a></span>
+										<a href="#processPayment" title="details" class="method-name">processPayment</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/rateOrderResponse.html">rateOrderResponse</a></span>
+										<a href="#rateOrder" title="details" class="method-name">rateOrder</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateCreditCardResponse.html">updateCreditCardResponse</a></span>
+										<a href="#updateCreditCard" title="details" class="method-name">updateCreditCard</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/CreditCardDTO.html">CreditCardDTO</a></span>&nbsp;<span class="var-name">$creditCard</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateCurrentOrderResponse.html">updateCurrentOrderResponse</a></span>
+										<a href="#updateCurrentOrder" title="details" class="method-name">updateCurrentOrder</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$lines</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fields</span>, <span class="var-type">Date</span>&nbsp;<span class="var-name">$date</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$eventDescription</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateItemResponse.html">updateItemResponse</a></span>
+										<a href="#updateItem" title="details" class="method-name">updateItem</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>&nbsp;<span class="var-name">$item</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateOrderResponse.html">updateOrderResponse</a></span>
+										<a href="#updateOrder" title="details" class="method-name">updateOrder</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>, <span class="var-type">updateOrder</span>&nbsp;<span class="var-name">$parameters</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateOrderLineResponse.html">updateOrderLineResponse</a></span>
+										<a href="#updateOrderLine" title="details" class="method-name">updateOrderLine</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderLineWS.html">OrderLineWS</a></span>&nbsp;<span class="var-name">$line</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">None.</span>
+										<a href="#updateUser" title="details" class="method-name">updateUser</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateUserContactResponse.html">updateUserContactResponse</a></span>
+										<a href="#updateUserContact" title="details" class="method-name">updateUserContact</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$typeId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ContactWS.html">ContactWS</a></span>&nbsp;<span class="var-name">$contact</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$userID</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/validatePurchaseResponse.html">validatePurchaseResponse</a></span>
+										<a href="#validatePurchase" title="details" class="method-name">validatePurchase</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fields</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodCXFAPI" id="CXFAPI"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor CXFAPI</span> (line <span class="line-number">172</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initalizes the jBilling Apache CXF API</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			CXFAPI
+		</span>
+					(<span class="var-type">$endpoint</span>&nbsp;<span class="var-name">$endpoint</span>, [<span class="var-type">$opts</span>&nbsp;<span class="var-name">$opts</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$endpoint</span>
+				<span class="var-name">$endpoint</span><span class="var-description">: The url of the CXF WSDL endpoint</span>			</li>
+					<li>
+				<span class="var-type">$opts</span>
+				<span class="var-name">$opts</span><span class="var-description">: Options passed into the PHP SoapClient constructor</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodapplyPayment" id="applyPayment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">applyPayment</span> (line <span class="line-number">728</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method enters a payment to the user account. It does not invoke any payment  processes, it just signals the payment as “entered”. It is useful to signal payments done  via external payment processes (a cheque being cashed, for example).</p>
+<p class="description"><p>This method can apply a payment of any type. The parameter for the related invoice,  although optional, should always be specified to allow the system to properly trace late  payments.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/applyPaymentResponse.html">applyPaymentResponse</a></span>
+		<span class="method-name">
+			applyPayment
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>, <span class="var-type">$invoiceId</span>&nbsp;<span class="var-name">$invoiceId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>
+				<span class="var-name">$payment</span><span class="var-description">: Data of the payment being applied.</span>			</li>
+					<li>
+				<span class="var-type">$invoiceId</span>
+				<span class="var-name">$invoiceId</span><span class="var-description">: Optionally identifies an invoice that is being paid by this                    payment. This parameter can be null (indicating this payment does not cover a specific                    invoice, or covers more than one).</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodapplyPayment">JbillingAPI::applyPayment()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodauthenticate" id="authenticate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">authenticate</span> (line <span class="line-number">526</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method provides user authentication. It is a shorthand for calling getUserId()  and getUserWS() in sequence, while also checking the password in the process.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer)          0: The user was successfully authenticated and his current status allows him             entrance to the system.          1: Invalid credentials. The user name or password are not correct.          2: Locked account: The user name or password are incorrect, and this is the last             allowed login attempt. From now on, the account is locked.          3: Password expired: The credentials are valid, but the password is expired. The             user needs to change it before logging in.          If the input data is null or missing, this method generates a JbillingAPIException that signals the problem.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/authenticateResponse.html">authenticateResponse</a></span>
+		<span class="method-name">
+			authenticate
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$password</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$username</span><span class="var-description">: The user's login name.</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$password</span><span class="var-description">: The user's password.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodauthenticate">JbillingAPI::authenticate()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodcreate" id="create"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">create</span> (line <span class="line-number">963</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method facilitates the sign-up of a new customer. It will create the new user, and all  the related objects: purchase order, invoice and payment.</p>
+<p class="description"><p>The payment will only be created and processed if a credit card is included in the  UserWS parameter. Therefore, the caller will always get values for the fields userId,  orderId and invoiceId, but paymentId and paymentResult would remain null if not  credit card information is found in the UserWS parameter.  The payment will be submitted for immediate, real-time processing to the payment  processor. The value in paymentResult will reflect the response of the payment  processor. An email notification will also be sent to the customer with the result of this  transaction.  To summarize, these are the tasks involved in this method: <ol><li>Creation of a new user</li><li>Creation of a new purchase order for this new user.</li><li>Generation of an invoice based on the purchase order.</li><li>Real-time processing of a payment for the invoice through a payment processor.</li><li>Notification via email of the result of this payment to the customer (if applicable, see</li></ol> the Notifications documentation for more information).  Steps 4 and 5 only take place if a credit card is present in the UserWS parameter.  See the description of the createUser and createOrder methods for more information.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createResponse.html">createResponse</a></span>
+		<span class="method-name">
+			create
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>
+				<span class="var-name">$user</span><span class="var-description">: The account information for the user that is being created.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>
+				<span class="var-name">$order</span><span class="var-description">: The purchase order information to assign to the new user. The                        userId of this object can be null and will be ignored, since this value will be assigned                        automatically with the userId of the newly created customer.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodcreate">JbillingAPI::create()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodcreateInvoice" id="createInvoice"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">createInvoice</span> (line <span class="line-number">912</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates invoices for orders not yet invoiced for the given user. Optionally only allows  recurring orders to generate invoices. Returns the ids of the newly created invoices.</p>
+<p class="description"><p>Calling this method is the equivalent as running the billing process for one single  customer. The system will go over all the applicable orders (and overdue invoices) to  generate one invoice. This is different than calling 'createOrderAndInvoice'. In that  method, the invoice comes from one single order, while in this one (crateInvoice), it  comes from potentially many orders.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createInvoiceResponse.html">createInvoiceResponse</a></span>
+		<span class="method-name">
+			createInvoice
+		</span>
+					(<span class="var-type">$userId</span>&nbsp;<span class="var-name">$userId</span>, [<span class="var-type">$onlyRecurring</span>&nbsp;<span class="var-name">$onlyRecurring</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$userId</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user that is having the invoices created.</span>			</li>
+					<li>
+				<span class="var-type">$onlyRecurring</span>
+				<span class="var-name">$onlyRecurring</span><span class="var-description">: If true, only recurring orders can generate invoices. If                        false, both one-time and recurring orders can generate invoices. Please note that if the                        preference 'ALLOW_INVOICES_WITHOUT_ORDERS' (46) is set to true, this will take                         precedence to any value coming from this parameter. If you have prefence 46 set to true                        and you call createInvoice with onlyRecurring equal to false, the system will use a 'true' anyway.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodcreateInvoice">JbillingAPI::createInvoice()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodcreateItem" id="createItem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createItem</span> (line <span class="line-number">460</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method creates a new item. A new record with this item information will be inserted  in the database. This method is frequently used to automate the uploading of a large  number of items during the initial setup.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer) The newly created item's identifier. If required fields in the input data structure           are missing, a JbillingAPIException is thrown to signal the error.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createItemResponse.html">createItemResponse</a></span>
+		<span class="method-name">
+			createItem
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>&nbsp;<span class="var-name">$dto</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>
+				<span class="var-name">$dto</span><span class="var-description">: Information for the item that is being created.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodcreateItem">JbillingAPI::createItem()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodcreateOrder" id="createOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">createOrder</span> (line <span class="line-number">656</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an order. When creating an order, you can indicate that the information of an order line should be fetched from</p>
+<p class="description"><p>the properties of an existing item. This is done through the field OrderLineWS.useItem. If this flag is set to ‘true’, then  the price of the order line will be the price of the item designated in OrderLineWS.itemId. The behavior of some fields change  depending on this flag:</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer) Identifier for the newly created invoice, if any, or null if the order data supplied was          incorrect, insufficient or with attributes that do not generate an invoice (for example, an active since in the future).          If you need to retrieve the ID of the order generated by a call to this method, call 'getLatestOrder'.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createOrderResponse.html">createOrderResponse</a></span>
+		<span class="method-name">
+			createOrder
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>
+				<span class="var-name">$order</span><span class="var-description">: The order data.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodcreateOrder">JbillingAPI::createOrder()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodcreateOrderAndInvoice" id="createOrderAndInvoice"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createOrderAndInvoice</span> (line <span class="line-number">984</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a new order and contextually generates the corresponding invoice. Typically, you only create the order and then</p>
+<p class="description"><p>let the billing process take care of the invoice generation. However, at times you might want to subscribe an existing  user (if the user does not exist, then it's better to call 'create') and immediately process the payment. In that case, you  will call this method and then call 'payInvoice' using the return value of this method. If you need to generate an invoice  based in many orders, you will need to call 'createOrder' many times, followed by 'createInvoice'.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Integer: Identifier for the newly created invoice, if any, or null if the order data           supplied was incorrect, insufficient or with attributes that do not generate an invoice (for example, an active since           in the future). If you need to retrieve the ID of the order generated by a call to this method, call 'getLatestOrder'.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createOrderAndInvoiceResponse.html">createOrderAndInvoiceResponse</a></span>
+		<span class="method-name">
+			createOrderAndInvoice
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>
+				<span class="var-name">$order</span><span class="var-description">: The order data.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodcreateOrderAndInvoice">JbillingAPI::createOrderAndInvoice()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodcreateOrderPreAuthorize" id="createOrderPreAuthorize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">createOrderPreAuthorize</span> (line <span class="line-number">483</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method creates an order. Then it submits pre-authorization payment request to a  payment gateway. The result of this request is returned as a PaymentAuthorizationDTOEx object.</p>
+<p class="description"><p>Regardless of the pre-authorization result, the order remains in the system after this call.  This method is typically called with an order whose 'active since' is set to a future date:  this would represent a 'free trial', where the paying period starts on the 'active since'  date, but you need to verify the paying capabilities of the potential customer.  The billing process will generate the invoice at the 'active since' date, and then 'capture'  the pre-authorization for the first payment. This guarantees that the payment will be  successful, since the payment gateway had already pre-authorized it.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> PaymentAuthorizationDTOEx: Data structure containing the outcome of the          payment verification process. If you need to know the ID of the new order, you will have to call 'getLatestOrder'.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createOrderPreAuthorizeResponse.html">createOrderPreAuthorizeResponse</a></span>
+		<span class="method-name">
+			createOrderPreAuthorize
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>
+				<span class="var-name">$order</span><span class="var-description">: Data for the order whose payment data is to be validated.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodcreateOrderPreAuthorize">JbillingAPI::createOrderPreAuthorize()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodcreateUser" id="createUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createUser</span> (line <span class="line-number">748</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method creates a new user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer) If the user has been successfully created, the return value is the newly created          user's ID. If the user name has already been used by another user record, it returns null. If the input data          is null or missing, this method generates a JbillingAPIException that signals the problem.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/createUserResponse.html">createUserResponse</a></span>
+		<span class="method-name">
+			createUser
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$newUser</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>
+				<span class="var-name">$newUser</span><span class="var-description">: The user data that will be used to create the new user record. The username field of this         structure must have a valid and unused user name string. The userId field can be set to -1 since the unique         identifier has not been generated yet (jBilling generates it during this call). If the contact or credit card         information are present, they will be created for the new user as well.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>
+				<span class="var-name">$user</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodcreateUser">JbillingAPI::createUser()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methoddeleteInvoice" id="deleteInvoice"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">deleteInvoice</span> (line <span class="line-number">239</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calling this method will delete the invoice record from the database, along with all its  invoice lines. It will also remove any links between the invoice and any related  payments, increasing the payments balance accordingly.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/deleteInvoiceResponse.html">deleteInvoiceResponse</a></span>
+		<span class="method-name">
+			deleteInvoice
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$invoiceId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$invoiceId</span><span class="var-description">: The unique identifier of the invoice that is to be deleted.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methoddeleteInvoice">JbillingAPI::deleteInvoice()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methoddeleteOrder" id="deleteOrder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">deleteOrder</span> (line <span class="line-number">886</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calling this method will mark a purchase order record as deleted, along with all its order lines.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> None. If the order identifier provided as input is null or does not correspond           to an existing order, the method throws a JbillingAPIException.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/deleteOrderResponse.html">deleteOrderResponse</a></span>
+		<span class="method-name">
+			deleteOrder
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$orderId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$orderId</span><span class="var-description">: The unique identifier of the order that is to be deleted.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methoddeleteOrder">JbillingAPI::deleteOrder()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methoddeleteUser" id="deleteUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">deleteUser</span> (line <span class="line-number">824</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes an existing user. It will only mark the user as deleted, the record will remain in the database. It will do the same for all  the orders, but will leave the invoices and payment untouched.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> None. If the userId provided is null or inexistent, a JbillingAPIException is generated.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/deleteUserResponse.html">deleteUserResponse</a></span>
+		<span class="method-name">
+			deleteUser
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$userID</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userID</span><span class="var-description">: The jBilling identifier for the user that is being deleted. This id is retrieved either from your application's         data or by a previous call to getUserId().</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methoddeleteUser">JbillingAPI::deleteUser()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetAllItems" id="getAllItems"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getAllItems</span> (line <span class="line-number">1156</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method returns a list of all items registered for a company in jBilling at the moment  the call is placed. It is useful to keep the data in other application synchronized with jBilling.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (ItemDTOEx[]) Array of item description data structures containing the information           for all items currently registered in jBilling.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getAllItemsResponse.html">getAllItemsResponse</a></span>
+		<span class="method-name">
+			getAllItems
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetAllItems">JbillingAPI::getAllItems()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetCurrentOrder" id="getCurrentOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getCurrentOrder</span> (line <span class="line-number">501</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the mediation current one-time order for this user for the given date. See the  “Telecom Guide” for more information about the mediation module and current one-time orders.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (OrderWS) The current one-time order for the user for the given date. If          the user has no mediation main-subscription order, null is returned.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getCurrentOrderResponse.html">getCurrentOrderResponse</a></span>
+		<span class="method-name">
+			getCurrentOrder
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Date</span>&nbsp;<span class="var-name">$date</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose current one-time order is being returned.</span>			</li>
+					<li>
+				<span class="var-type">Date</span>
+				<span class="var-name">$date</span><span class="var-description">: The date that determines which current one-time order should be returned. The         date will fall within the order's active period.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetCurrentOrder">JbillingAPI::getCurrentOrder()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetInvoicesByDate" id="getInvoicesByDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getInvoicesByDate</span> (line <span class="line-number">770</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use this method to retrieve all the invoices created in a given period of time. The method will return the ids of the  invoices, so you will have to call getInvoice to get the complete object related to each ID. The results will be returned  in no particular order. This method can help you synchronize jBilling with other applications that require an updated list  of invoices. For example, to get all the invoices for January 2005, you would call, getInvoicesByDate(“2005-01-01”, “2005-01-31”).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer[]): This method returns the invoices generated within the period specified by the parameters.          Both dates are included in the query. The date used for the query is the actual creation of the invoices (time stamp), regardless          of the ‘invoice date’, that is assigned following the billing rules and configuration parameters. Subsequent calls to getInvoice          are necessary to retrieve the related InvoiceWS objects. If the no invoices where generated for the specified period, an empty          array is returned. If the parameters do not follow the required format (yyyy-mm-dd), null is returned.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getInvoicesByDateResponse.html">getInvoicesByDateResponse</a></span>
+		<span class="method-name">
+			getInvoicesByDate
+		</span>
+					(<span class="var-type">Date</span>&nbsp;<span class="var-name">$since</span>, <span class="var-type">Date</span>&nbsp;<span class="var-name">$until</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Date</span>
+				<span class="var-name">$since</span><span class="var-description">: The starting date for the data extraction.</span>			</li>
+					<li>
+				<span class="var-type">Date</span>
+				<span class="var-name">$until</span><span class="var-description">: The ending date for the data extraction.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetInvoicesByDate">JbillingAPI::getInvoicesByDate()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetInvoiceWS" id="getInvoiceWS"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getInvoiceWS</span> (line <span class="line-number">1236</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method retrieves the invoice information regarding a specific invoice in the system.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (InvoiceWS) Contains the information regarding the invoice that was requested.           If the identifier supplied as argument is null or does not represent a currently existing invoice, a           JbillingAPIException is thrown.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getInvoiceWSResponse.html">getInvoiceWSResponse</a></span>
+		<span class="method-name">
+			getInvoiceWS
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$invoiceId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$invoiceId</span><span class="var-description">: Identifier for the invoice that should be retrieved.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetInvoiceWS">JbillingAPI::getInvoiceWS()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetItem" id="getItem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getItem</span> (line <span class="line-number">635</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method returns the item description for an item. If business rules exist that affect  the item being retrieved, they are applied and their effects are reflected in the returned  data structure.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The item description structure for the item being retrieved.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getItemResponse.html">getItemResponse</a></span>
+		<span class="method-name">
+			getItem
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemId</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span> = <span class="var-default">null</span>], [<span class="var-type">PricingField[]</span>&nbsp;<span class="var-name">$pricingFields</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$itemId</span><span class="var-description">: Identifier of the item that is being retrieved. This is the only required                 parameter, if your intention is to simply retrieve the item data.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: Identifier of the user for which this item is being retrieved (useful to                 determine if any specific pricing rules apply to this customer). This parameter is optional                 and used in conjunction with the pricing rules engine.</span>			</li>
+					<li>
+				<span class="var-type">PricingField[]</span>
+				<span class="var-name">$pricingFields</span><span class="var-description">: Array of PricingField structures specifying                        optional pricing parameters to be passed to the rules engine for evaluation. Pricing fields                        are descriptors that provide further information to the pricing engine and aid in forming                        the price for the order itself. This parameter is optional and used in conjunction with the                        pricing rules engine.  See section “A word on pricing” for a more detailed explanation of the use of pricing  fields and the purpose of rule-based pricing.  Note to SOAP based integration implementors: the pricingFields parameter of this  call is implemented as an array of PricingField structures only in the API. Direct calls to  the SOAP layer require you to encode and decode this array of values into a serialized  string (so, for SOAP calls, the third parameter is actually a String). For more details on  how to serialize these structures into strings, see section “A word on pricing”.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetItem">JbillingAPI::getItem()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLastInvoices" id="getLastInvoices"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastInvoices</span> (line <span class="line-number">585</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use this method to retrieve several invoices belonging to a customer, starting from the last one. The method will return the</p>
+<p class="description"><p>ids of the invoices, so you will have to call getInvoice to get the complete object related to each ID. The results will be  returned in inverse chronological order. This is a handy method to provide your customers with historical data regarding their  invoices. For example, getLastInvoices(1234, 12) will be returning the last 12 invoices of the customer id 1234, and if you invoice  your customers in a monthly basis, that means one year of invoices.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer[]) Array of invoice identifiers of the latest n invoices for this customer. It is possible          that the customer has not generated as many invoices as requested (for example, you ask for the latest 10 invoices, but the          system has generated only 8 invoices so far, you'll be returned those 8 invoices, so it is good practice to double check the          size of the returned array). The caller should check if the invoice is not deleted by verifying that that deleted == 0. If the          customer does not have any invoices, an empty array is returned. If the userId provided as parameter is either null or does not          represent a currently existing user, a JbillingAPIException will be thrown, to indicate the error condition.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastInvoicesResponse.html">getLastInvoicesResponse</a></span>
+		<span class="method-name">
+			getLastInvoices
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: Identifier of the user whose latest invoices are to be retrieved.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$number</span><span class="var-description">: The number of invoices that are to be retrieved for this user.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLastInvoices">JbillingAPI::getLastInvoices()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLastInvoicesByItemType" id="getLastInvoicesByItemType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastInvoicesByItemType</span> (line <span class="line-number">441</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the ids of the last invoices for the given user that contain item/s of the given item type.</p>
+<p class="description"><p>The number parameter limits the maximum amount of invoice ids returned.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer[]) An array of the invoice ids for the given user that contain item's           of the given type. Returns null if the userId, itemTypeId or number parameters are null.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastInvoicesByItemTypeResponse.html">getLastInvoicesByItemTypeResponse</a></span>
+		<span class="method-name">
+			getLastInvoicesByItemType
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemTypeId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose invoice is to be returned.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$itemTypeId</span><span class="var-description">: The identifier of the type of item/s that the invoice must contain.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$number</span><span class="var-description">: The maximum number of invoice ids to be returned.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLastInvoicesByItemType">JbillingAPI::getLastInvoicesByItemType()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLastOrders" id="getLastOrders"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastOrders</span> (line <span class="line-number">290</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The ids of the last n purchase orders belonging to the user id given as a first parameter</p>
+<p class="description"><p>will be returned as an array. The first element of the array will be the latest purchase  order. The next element will be the previous purchase order and so on. Subsequent calls  to getOrder are necessary to retrieve the related OrderWS objects. The caller should  check if the purchase order is not deleted by verifying that that deleted == 0. If the  customer does not have any purchase orders, an empty array is returned.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastOrdersResponse.html">getLastOrdersResponse</a></span>
+		<span class="method-name">
+			getLastOrders
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The user account for which the extraction is to be performed.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$number</span><span class="var-description">: The maximum number of orders that should be extracted.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLastOrders">JbillingAPI::getLastOrders()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLastOrdersByItemType" id="getLastOrdersByItemType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastOrdersByItemType</span> (line <span class="line-number">1139</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the ids of the last orders for the given user that contain item's of the given item type. The number  parameter limits the maximum amount of order ids returned.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer[]) An array of the order ids for the given user that contain           item's of the given type. Returns null if the userId or number parameters are null.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastOrdersByItemTypeResponse.html">getLastOrdersByItemTypeResponse</a></span>
+		<span class="method-name">
+			getLastOrdersByItemType
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemTypeId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose order ids are to be returned.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$itemTypeId</span><span class="var-description">: The identifier of the type of item's that the orders must contain.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$number</span><span class="var-description">: The maximum number of order ids to be returned.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLastOrdersByItemType">JbillingAPI::getLastOrdersByItemType()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLastPayments" id="getLastPayments"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastPayments</span> (line <span class="line-number">790</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use this method to retrieve several payments belonging to a customer, starting from the last one. The method will return the ids of the  payments, so you will have to call getPayment to get the complete object related to each ID. The results will be returned in inverse  chronological order. This is a handy method to provide your customers with historical data regarding their payments. For example,  getLastPayments(1234, 12) will be returning the last 12 payments of the customer id 1234.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer[]) Array of payment identifiers for the latest n payments processed for the user. If the          input parameters are missing or incorrect, a JbillingAPIException is issued.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLastPaymentsResponse.html">getLastPaymentsResponse</a></span>
+		<span class="method-name">
+			getLastPayments
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$number</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: Identifier of the customer whose payment information is to be retrieved.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$number</span><span class="var-description">: The number of payments to retrieve.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLastPayments">JbillingAPI::getLastPayments()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLastRequest" id="getLastRequest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastRequest</span> (line <span class="line-number">186</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../com-makeabyte-contrib-jbilling-php/JbillingAPIFactory.html#methodgetLastRequest">JbillingAPIFactory::getLastRequest()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastRequest
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLastRequestHeaders" id="getLastRequestHeaders"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastRequestHeaders</span> (line <span class="line-number">194</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../com-makeabyte-contrib-jbilling-php/JbillingAPIFactory.html#methodgetLastRequestHeaders">JbillingAPIFactory::getLastRequestHeaders()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastRequestHeaders
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLastResponse" id="getLastResponse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastResponse</span> (line <span class="line-number">202</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../com-makeabyte-contrib-jbilling-php/JbillingAPIFactory.html#methodgetLastResponse">JbillingAPIFactory::getLastResponse()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastResponse
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLastResponseHeaders" id="getLastResponseHeaders"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastResponseHeaders</span> (line <span class="line-number">210</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../com-makeabyte-contrib-jbilling-php/JbillingAPIFactory.html#methodgetLastResponseHeaders">JbillingAPIFactory::getLastResponseHeaders()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastResponseHeaders
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLatestInvoice" id="getLatestInvoice"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLatestInvoice</span> (line <span class="line-number">223</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the latest invoice that has been issued for a given user. This is particularly  important because the latest invoice typically represents the account balance of a  customer (this does not have to be the case, but it is a typical jBilling configuration).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestInvoiceResponse.html">getLatestInvoiceResponse</a></span>
+		<span class="method-name">
+			getLatestInvoice
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: Identifier of the customer whose latest invoice is to be retrieved.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLatestInvoice">JbillingAPI::getLatestInvoice()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLatestInvoiceByItemType" id="getLatestInvoiceByItemType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLatestInvoiceByItemType</span> (line <span class="line-number">1200</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the latest invoice for the given user that contains item's of the given item type.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> InvoiceWS: The latest invoice for the given user that contains item's           of the given item type. Returns null if no such invoice exists or the userId is null.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestInvoiceByItemTypeResponse.html">getLatestInvoiceByItemTypeResponse</a></span>
+		<span class="method-name">
+			getLatestInvoiceByItemType
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemTypeId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose invoice is to be returned.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$itemTypeId</span><span class="var-description">: The identifier of the type of item's that the invoice must contain.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLatestInvoiceByItemType">JbillingAPI::getLatestInvoiceByItemType()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLatestOrder" id="getLatestOrder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLatestOrder</span> (line <span class="line-number">254</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieves the latest order created for a given user account. This is true unless the order  has been deleted. This method will filter out any deleted order.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestOrderResponse.html">getLatestOrderResponse</a></span>
+		<span class="method-name">
+			getLatestOrder
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The user account's unique identifier.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLatestOrder">JbillingAPI::getLatestOrder()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLatestOrderByItemType" id="getLatestOrderByItemType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLatestOrderByItemType</span> (line <span class="line-number">1051</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the latest order for the given user that contains item/s of the given item type.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (OrderWS) The latest order for the given user that contains item's of           the given item type. Returns null if no such order exists. If the userId or itemTypeId are null, a           JbillingAPIException is thrown.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestOrderByItemTypeResponse.html">getLatestOrderByItemTypeResponse</a></span>
+		<span class="method-name">
+			getLatestOrderByItemType
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemTypeId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose order is to be returned.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$itemTypeId</span><span class="var-description">: The identifier of the type of item/s that the order must contain.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLatestOrderByItemType">JbillingAPI::getLatestOrderByItemType()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetLatestPayment" id="getLatestPayment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLatestPayment</span> (line <span class="line-number">838</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method returns the latest payment entered or processed for a specific customer.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (PaymentWS) Information for this customer's latest payment. Can be null (no payments present for this customer).</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getLatestPaymentResponse.html">getLatestPaymentResponse</a></span>
+		<span class="method-name">
+			getLatestPayment
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: Identifier of the customer whose payment information is to be retrieved.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetLatestPayment">JbillingAPI::getLatestPayment()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetOrder" id="getOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getOrder</span> (line <span class="line-number">999</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the order data for a specific order.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (OrderWS) The order information, or an exception if the supplied order ID is invalid or if          the order ID belongs to a deleted order. The object will have all the related order lines.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getOrderResponse.html">getOrderResponse</a></span>
+		<span class="method-name">
+			getOrder
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$orderId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$orderId</span><span class="var-description">: Unique identifier for the order.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetOrder">JbillingAPI::getOrder()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetOrderByPeriod" id="getOrderByPeriod"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getOrderByPeriod</span> (line <span class="line-number">1069</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of all orders of a specific periodicity for a given user. The method only  returns the order's IDs, so subsequent calls to 'getOrder' are necessary if you need the objects.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer[]) Array containing the identifiers for the orders that respond to the input parameters.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getOrderByPeriodResponse.html">getOrderByPeriodResponse</a></span>
+		<span class="method-name">
+			getOrderByPeriod
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userID</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$periodId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The user for which the extraction is desired.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$periodId</span><span class="var-description">: Identifier for the period type. This value can be obtained from the jBilling          User Interface under “Orders -&gt; Periods” or from your billing administrator.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userID</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetOrderByPeriod">JbillingAPI::getOrderByPeriod()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetOrderLine" id="getOrderLine"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getOrderLine</span> (line <span class="line-number">1121</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieves a specific order line by supplying its identifier.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (OrderLineWS) The order line's information.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getOrderLineResponse.html">getOrderLineResponse</a></span>
+		<span class="method-name">
+			getOrderLine
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$orderLineId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$orderLineId</span><span class="var-description">: Unique identifier of the desired order line. You would know          about this ID by first getting a complete order.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetOrderLine">JbillingAPI::getOrderLine()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetPayment" id="getPayment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPayment</span> (line <span class="line-number">378</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method returns information about a specific payment.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (PaymentWS) Information for the specified payment. If the input parameter is either null           or does not correspond to a currently existing payment record, a JbillingAPIException is issued.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getPaymentResponse.html">getPaymentResponse</a></span>
+		<span class="method-name">
+			getPayment
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$paymentId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$paymentId</span><span class="var-description">: Identifier of the payment to be retrieved.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>
+				<span class="var-name">$payment</span><span class="var-description">: Information for the specified payment. If the input parameter is either null         or does not correspond to a currently existing payment record, a JbillingAPIException is issued.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetPayment">JbillingAPI::getPayment()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUserContactsWS" id="getUserContactsWS"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserContactsWS</span> (line <span class="line-number">1250</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">todo:</span> Get documentation</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserContactsWSResponse.html">getUserContactsWSResponse</a></span>
+		<span class="method-name">
+			getUserContactsWS
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/getUserContactsWS.html">getUserContactsWS</a></span>&nbsp;<span class="var-name">$parameters</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">getUserContactsWS</span>
+				<span class="var-name">$parameters</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUserId" id="getUserId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserId</span> (line <span class="line-number">602</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the unique identifier associated to a user in jBilling. This method is meaningful  specially during login, where you use it to retrieve the user's ID from the supplied user name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Integer: The user's identification number. If the parameter provided is null          or there isn't a user with the user name give as a parameter, a JbillingAPIException is thrown.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserIdResponse.html">getUserIdResponse</a></span>
+		<span class="method-name">
+			getUserId
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$username</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$username</span><span class="var-description">: The user's login name.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetUserId">JbillingAPI::getUserId()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUserItemsByCategory" id="getUserItemsByCategory"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserItemsByCategory</span> (line <span class="line-number">360</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the ids of items of the given type (category) which are found in recurring (i.e.,  not one-time) orders for the given user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer[]) An array of item ids of categoryId item type found in recurring orders for this userId.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserItemsByCategoryResponse.html">getUserItemsByCategoryResponse</a></span>
+		<span class="method-name">
+			getUserItemsByCategory
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$categoryId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose orders are searched for items.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$categoryId</span><span class="var-description">: The identifier of the type of item/s that the orders must contain.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetUserItemsByCategory">JbillingAPI::getUserItemsByCategory()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUsersByCreditCard" id="getUsersByCreditCard"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersByCreditCard</span> (line <span class="line-number">1261</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">todo:</span> Get documentation</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByCreditCardResponse.html">getUsersByCreditCardResponse</a></span>
+		<span class="method-name">
+			getUsersByCreditCard
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByCreditCard.html">getUsersByCreditCard</a></span>&nbsp;<span class="var-name">$parameters</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">getUsersByCreditCard</span>
+				<span class="var-name">$parameters</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUsersByCustomField" id="getUsersByCustomField"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersByCustomField</span> (line <span class="line-number">807</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns all users that share a common custom contact field with a specific value. See  the section Custom Contact Fields for an explanation on how to use these fields.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Integer[]) An array of all users that have the indicated custom field set to the specified value.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByCustomFieldResponse.html">getUsersByCustomFieldResponse</a></span>
+		<span class="method-name">
+			getUsersByCustomField
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$typeId</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$typeId</span><span class="var-description">: Identifier of the custom contact field ID.</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$value</span><span class="var-description">: The value that will be tested for all users in order to determine which users should be extracted.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetUsersByCustomField">JbillingAPI::getUsersByCustomField()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUsersByStatus" id="getUsersByStatus"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersByStatus</span> (line <span class="line-number">1169</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">todo:</span> Get documentation</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByStatusResponse.html">getUsersByStatusResponse</a></span>
+		<span class="method-name">
+			getUsersByStatus
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/getUsersByStatus.html">getUsersByStatus</a></span>&nbsp;<span class="var-name">$parameters</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">getUsersByStatus</span>
+				<span class="var-name">$parameters</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUsersInStatus" id="getUsersInStatus"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersInStatus</span> (line <span class="line-number">561</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of all users in a given status. Useful for making synchronization calls between your application and  jBilling, or to otherwise process this information (for example, for a report).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Integer[]: An array containing the identifiers of all users that were in the status given          as input in the moment the method was called (status transitions could occur after the method was called, so this          information should not be used to grant access to the site or to substitute the authorize() or getUserWS() methods for authentication).</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersInStatusResponse.html">getUsersInStatusResponse</a></span>
+		<span class="method-name">
+			getUsersInStatus
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$statusId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$statusId</span><span class="var-description">: Indicates what status will be used for extraction. See Appendix A for a list of acceptable status codes.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetUsersInStatus">JbillingAPI::getUsersInStatus()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUsersNotInStatus" id="getUsersNotInStatus"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersNotInStatus</span> (line <span class="line-number">544</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The opposite of getUsersInStatus(), this method provides a list of all users that are not currently in the given status.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Integer[]: An array containing the identifiers of all users that were in any status different          to the one given as input in the moment the method was called (status transitions could occur after the method was called,          so this information should not be used to grant access to the site or to substitute the authorize() or getUserWS() methods          for authentication).</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUsersNotInStatusResponse.html">getUsersNotInStatusResponse</a></span>
+		<span class="method-name">
+			getUsersNotInStatus
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$statusId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$statusId</span><span class="var-description">: Indicates what status will be used for extraction. See Appendix A for a list of acceptable status codes.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetUsersNotInStatus">JbillingAPI::getUsersNotInStatus()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUserTransitions" id="getUserTransitions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserTransitions</span> (line <span class="line-number">704</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of subscription transitions that have taken place in a given period of time. See the section Subscription status  for an explanation on how this function can be used.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (UserTransitionResponseWS[]) Array of transition records containing the transition information          for all registered changes in subscription status.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserTransitionsResponse.html">getUserTransitionsResponse</a></span>
+		<span class="method-name">
+			getUserTransitions
+		</span>
+					(<span class="var-type">Date</span>&nbsp;<span class="var-name">$to</span>, <span class="var-type">Date</span>&nbsp;<span class="var-name">$from</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Date</span>
+				<span class="var-name">$from</span><span class="var-description">: Starting date of the extraction period. Can be null (in which case, the extraction period starts from the last         time this function was called, or from the first transition if the function has not yet been called).</span>			</li>
+					<li>
+				<span class="var-type">Date</span>
+				<span class="var-name">$to</span><span class="var-description">: Ending date of the extraction period. Can be null (in which case the extraction has no upper limit, i.e. It extracts         all records that have happened to this moment).</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetUserTransitions">JbillingAPI::getUserTransitions()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUserTransitionsAfterId" id="getUserTransitionsAfterId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserTransitionsAfterId</span> (line <span class="line-number">927</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">todo:</span> Get documentation</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserTransitionsAfterIdResponse.html">getUserTransitionsAfterIdResponse</a></span>
+		<span class="method-name">
+			getUserTransitionsAfterId
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetUserTransitionsAfterId">JbillingAPI::getUserTransitionsAfterId()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUserWS" id="getUserWS"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserWS</span> (line <span class="line-number">390</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method returns the user data contained in jBilling.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (UserWS) The account information, or null if the supplied userId is not assigned to an           existing user. If the parameter is null or inexistent, a JbillingAPIException is generated.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/getUserWSResponse.html">getUserWSResponse</a></span>
+		<span class="method-name">
+			getUserWS
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier for the user whose account data is being retrieved.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>
+				<span class="var-name">$user</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodgetUserWS">JbillingAPI::getUserWS()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodisUserSubscribedTo" id="isUserSubscribedTo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isUserSubscribedTo</span> (line <span class="line-number">853</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the quantity of the given item the user is subscribed to, that is, has recurring orders for.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Double) The quantity of the item the user is subscribed to.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/isUserSubscribedToResponse.html">isUserSubscribedToResponse</a></span>
+		<span class="method-name">
+			isUserSubscribedTo
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose subscription is being checked.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$itemId</span><span class="var-description">: The identifier of the item the user is being checked for subscription to.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodisUserSubscribedTo">JbillingAPI::isUserSubscribedTo()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodpayInvoice" id="payInvoice"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">payInvoice</span> (line <span class="line-number">307</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method executes a payment for a given invoice. The system will call the payment  processor plug-in configured in your system to access a payment gateway and submit  the payment to it.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/payInvoiceResponse.html">payInvoiceResponse</a></span>
+		<span class="method-name">
+			payInvoice
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$invoiceId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$invoiceId</span><span class="var-description">: Identifier of the invoice that is to be paid.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodpayInvoice">JbillingAPI::payInvoice()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodprocessPayment" id="processPayment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">processPayment</span> (line <span class="line-number">270</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Allows arbitrary payments to be processed without an invoice. The system will call the  payment processor plug-in configured in your system to access a payment gateway and  submit the payment to it.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/processPaymentResponse.html">processPaymentResponse</a></span>
+		<span class="method-name">
+			processPayment
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>
+				<span class="var-name">$payment</span><span class="var-description">: Data of the payment being applied.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodprocessPayment">JbillingAPI::processPayment()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodrateOrder" id="rateOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">rateOrder</span> (line <span class="line-number">1220</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Performs pricing calculations on an order as if it was inserted, but does not actually  create the order. Useful if you need to have immediate feedback on the pricing applied  to a specific customer or item combinations, specially if you use rule-driven pricing (see  the “Extensions Guide” for more information on rule-based pricing).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (OrderWS) The data for the order, as generated by the pricing engine. Mostly, it holds the          data you passed as input, except for the price and amount fields, that should contain          proper values calculated for the order according to pricing rules.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/rateOrderResponse.html">rateOrderResponse</a></span>
+		<span class="method-name">
+			rateOrder
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>
+				<span class="var-name">$order</span><span class="var-description">: Holds the data for the order being rated</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodrateOrder">JbillingAPI::rateOrder()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodupdateCreditCard" id="updateCreditCard"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateCreditCard</span> (line <span class="line-number">1183</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Updates credit card information for a user. A user can have more than one credit card record. After calling this  method, the user will only have this credit card. This method will remove all the existing credit cards and then  assign the one given as a parameter.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> None. If the parameters provided are null or incorrect, a JbillingAPIException is thrown.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateCreditCardResponse.html">updateCreditCardResponse</a></span>
+		<span class="method-name">
+			updateCreditCard
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/CreditCardDTO.html">CreditCardDTO</a></span>&nbsp;<span class="var-name">$creditCard</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose credit card information is being updated.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/CreditCardDTO.html">CreditCardDTO</a></span>
+				<span class="var-name">$creditCard</span><span class="var-description">: The credit card's data with the updated values.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodupdateCreditCard">JbillingAPI::updateCreditCard()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodupdateCurrentOrder" id="updateCurrentOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateCurrentOrder</span> (line <span class="line-number">1102</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Allows the mediation current one-time order to be updated with an event for this user for the given date. This method is</p>
+<p class="description"><p>used for real-time mediation of events. See the “Telecom Guide” for more information about the mediation module, mediation  events and current one-time orders. The order lines update existing lines or create new lines, depending on what items are  already in the order. The pricing fields determine the pricing for this event, The event description is saved in the mediation  event record. Returns the updated order.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> OrderWS: The current one-time order for the user for the given date. If the user has no           mediation main-subscription order, a JbillingAPIException is thrown.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateCurrentOrderResponse.html">updateCurrentOrderResponse</a></span>
+		<span class="method-name">
+			updateCurrentOrder
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$lines</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fields</span>, <span class="var-type">Date</span>&nbsp;<span class="var-name">$date</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$eventDescription</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose current one-time order is being updated and returned.</span>			</li>
+					<li>
+				<span class="var-type">OrderLineWS[]</span>
+				<span class="var-name">$lines</span><span class="var-description">: The order lines to be added to, or used to update, the current one-time order, depending on whether          the items are already in the order.</span>			</li>
+					<li>
+				<span class="var-type">PricingField[]</span>
+				<span class="var-name">$fields</span><span class="var-description">: Array of PricingField structures specifying optional pricing parameters to be passed to the rules          engine for evaluation. Pricing fields are descriptors that provide further information to the pricing engine and aid in          forming the price for the border itself. This parameter is optional and used in conjunction with the pricing rules engine.          See section “A word on pricing” for a more detailed explanation of the use of pricing fields and the purpose of rule-based pricing.          Note to SOAP based integration implementors: the pricingFields parameter of this call is implemented as an array of PricingField          structures only in the API. Direct calls to the SOAP layer require you to encode and decode this array of values into a serialized          string (so, for SOAP calls, the third parameter is actually a String). For more details on how to serialize these structures into          strings, see section “A word on pricing”.</span>			</li>
+					<li>
+				<span class="var-type">Date</span>
+				<span class="var-name">$date</span><span class="var-description">: The date that determines which current one-time order should be updated and returned. The date will fall within          the order's active period.</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$eventDescription</span><span class="var-description">: The description to be used for the mediation event record.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodupdateCurrentOrder">JbillingAPI::updateCurrentOrder()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodupdateItem" id="updateItem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateItem</span> (line <span class="line-number">324</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Modifies the data associated to a jBilling item.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateItemResponse.html">updateItemResponse</a></span>
+		<span class="method-name">
+			updateItem
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>&nbsp;<span class="var-name">$item</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>
+				<span class="var-name">$item</span><span class="var-description">: Data structure for the item, containing the parameters being                            modified (most probably, this structure is retrieved by a previous call to getItem(), and                          changing the desired values from the structure returned).</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodupdateItem">JbillingAPI::updateItem()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodupdateOrder" id="updateOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateOrder</span> (line <span class="line-number">1034</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Updates an order's data. Calling this method will modify an existing purchase order.</p>
+<p class="description"><p>Since this method updates all the order fields and all the order lines, normally the  following steps are followed:</p><p><ol><li>A call to get to retrieve the current information</li><li>Modify the fields to update. Add, update or remove order lines.</li><li>Call update</li></ol>  The existing order lines will be deleted, and new ones will be created with those  provided in the OrderWS object passed as a parameter. In the end, the order identified  by the field id will look exactly the same as the parameter passed.  The flag useItem present in each order line (OrderLineWS) works the same way when  updating an order as it does when creating one. This is something to consider when you  want to add order lines to an existing purchase order. You could also use this flag when  updating an order line, but is not as common. Keep in mind that when your retrieve an  order from the system, all its order lines will be having the flag useItem equal to false,  regardless on how the were created.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateOrderResponse.html">updateOrderResponse</a></span>
+		<span class="method-name">
+			updateOrder
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>, <span class="var-type">updateOrder</span>&nbsp;<span class="var-name">$parameters</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>
+				<span class="var-name">$order</span><span class="var-description">: The updated order data. This can be either obtained from a previous         call to getOrder() or created directly by your application, although the latter is unadvised         (if you do not fill a field, its previous content is lost, so the advised procedure is to first         retrieve the data to update, make the changes needed and resubmit that same data back).</span>			</li>
+					<li>
+				<span class="var-type">updateOrder</span>
+				<span class="var-name">$parameters</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodupdateOrder">JbillingAPI::updateOrder()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodupdateOrderLine" id="updateOrderLine"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateOrderLine</span> (line <span class="line-number">871</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Updates the order line with the supplied information. This can be used to also delete an  order line. If the 'quantity' field of the order line is set to '0', the order line is not updated,  it is instead removed.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> None. If the provided order line data is invalid or does not correspond to an existing  order line, the method generates a JbillingAPIException.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateOrderLineResponse.html">updateOrderLineResponse</a></span>
+		<span class="method-name">
+			updateOrderLine
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderLineWS.html">OrderLineWS</a></span>&nbsp;<span class="var-name">$line</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderLineWS.html">OrderLineWS</a></span>
+				<span class="var-name">$line</span><span class="var-description">: The updated order line data to be stored in jBilling.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodupdateOrderLine">JbillingAPI::updateOrderLine()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodupdateUser" id="updateUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateUser</span> (line <span class="line-number">685</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method updates the user account information in jBilling. This includes the contact  and credit card information.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> If the user identifier supplied is incorrect or the parameter is null or invalid, this          method throws a JbillingAPIException to signal the problem.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">None.</span>
+		<span class="method-name">
+			updateUser
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>
+				<span class="var-name">$user</span><span class="var-description">: The user's data. Can be obtained by a previous call to getUserWS() or                      generated directly by your application (be careful, if you don't put                      values into fields that haven't changed, you'll loose those values, so it is best to first retrieve the data                         record with getUserWS() and just change the required fields and resubmit the                         UserWS structure). The supplied UserWS structure must contain a valid user                         identification number in its userId field.                         Three fields of the UserWS input parameter can be null. If the following fields are null,                         they will simply be ignored: password, creditCard and contact. If you do not want                         those fields to be updated, simply set their value to null.                         This is useful on occasions where the jBilling configuration encrypts or does not make                         available certain values. The password and credit card are among them. If that is the                         case, a call to getUserWS() will return values for those fields that won't pass the                         validations of a subsequent call to updateUser.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodupdateUser">JbillingAPI::updateUser()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodupdateUserContact" id="updateUserContact"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateUserContact</span> (line <span class="line-number">342</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Updates the user contact information.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> None. If the parameters provided are null or inexistent, a JbillingAPIException is generated.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/updateUserContactResponse.html">updateUserContactResponse</a></span>
+		<span class="method-name">
+			updateUserContact
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$typeId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ContactWS.html">ContactWS</a></span>&nbsp;<span class="var-name">$contact</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$userID</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userID</span><span class="var-description">: The identifier of the user whose contact information is being updated.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$typeId</span><span class="var-description">: The contact's type. This is typically a '2' for the primary contact type in         an installation with only one company. You would need to query the table contact_type           to find out the IDs of all the type available in your system.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ContactWS.html">ContactWS</a></span>
+				<span class="var-name">$contact</span><span class="var-description">: Maintains the contact data that is being updated.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodupdateUserContact">JbillingAPI::updateUserContact()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodvalidatePurchase" id="validatePurchase"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validatePurchase</span> (line <span class="line-number">421</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the quantity available to the user of the given item when priced by the given  pricing fields. The customer's dynamic balance is used for this calculating the maximum  quantity that can be purchased before the customer's credit limit is reached or prepaid  balance is reduced to zero.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (Double) The maximum quantity of the itemId that the user can purchase           according to their dynamic balance (available credit remaining or prepaid balance). Returns null           if userId or itemId is null.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/validatePurchaseResponse.html">validatePurchaseResponse</a></span>
+		<span class="method-name">
+			validatePurchase
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$itemId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fields</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The identifier of the user whose available quantity is being calculated.</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$itemId</span><span class="var-description">: The identifier of the item to have the quantity returned.</span>			</li>
+					<li>
+				<span class="var-type">PricingField[]</span>
+				<span class="var-name">$fields</span><span class="var-description">: Array of PricingField structures specifying optional pricing parameters          to be passed to the rules engine for evaluation. Pricing fields are descriptors that provide          further information to the pricing engine and aid in forming the price for the order itself.          This parameter is optional and used in conjunction with the pricing rules engine.          See section “A word on pricing” for a more detailed explanation of the use of pricing          fields and the purpose of rule-based pricing.          Note to SOAP based integration implementors: the pricingFields parameter of this          call is implemented as an array of PricingField structures only in the API. Direct calls to          the SOAP layer require you to encode and decode this array of values into a serialized          string (so, for SOAP calls, the third parameter is actually a String). For more details on          how to serialize these structures into strings, see section “A word on pricing”.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPI.html#methodvalidatePurchase">JbillingAPI::validatePurchase()</a></dt>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname">SoapClient (Internal Class)</span></p>
+					<blockquote>
+													<span class="method-name">constructor SoapClient ( $wsdl, [$options = ] )</span><br>
+													<span class="method-name">__call ( $function_name, $arguments )</span><br>
+													<span class="method-name">__doRequest ( $request, $location, $action, $version, [$one_way = ] )</span><br>
+													<span class="method-name">__getFunctions (  )</span><br>
+													<span class="method-name">__getLastRequest (  )</span><br>
+													<span class="method-name">__getLastRequestHeaders (  )</span><br>
+													<span class="method-name">__getLastResponse (  )</span><br>
+													<span class="method-name">__getLastResponseHeaders (  )</span><br>
+													<span class="method-name">__getTypes (  )</span><br>
+													<span class="method-name">__setCookie ( $name, [$value = ] )</span><br>
+													<span class="method-name">__setLocation ( [$new_location = ] )</span><br>
+													<span class="method-name">__setSoapHeaders ( $soapheaders )</span><br>
+													<span class="method-name">__soapCall ( $function_name, $arguments, [$options = ], [$input_headers = ], [&$output_headers = ] )</span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 09 Oct 2009 14:22:32 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

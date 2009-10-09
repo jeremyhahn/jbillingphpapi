@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * @package com.makeabyte.contrib.jbilling.php.test
+ * @package com.makeabyte.contrib.jbilling.php.test.mock
  */
 
 class MockPaymentInfoChequeDTO extends MockObject {
@@ -26,9 +26,9 @@ class MockPaymentInfoChequeDTO extends MockObject {
 	  public function getObject() {
 
 	  	     $PaymentInfoChequeDTO = new PaymentInfoChequeDTO();
-	  	     $PaymentInfoChequeDTO->setId( 1 );
-	  	     $PaymentInfoChequeDTO->setBank( "US Bank" );
-	  	     $PaymentInfoChequeDTO->setNumber( "12345" );
+	  	     $PaymentInfoChequeDTO->setId( PAYMENTINFOCHEQUE_ID );
+	  	     $PaymentInfoChequeDTO->setBank( PAYMENTINFOCHEQUE_BANK );
+	  	     $PaymentInfoChequeDTO->setNumber( PAYMENTINFOCHEQUE_NUMBER );
 
 			 return $PaymentInfoChequeDTO;
 	  }

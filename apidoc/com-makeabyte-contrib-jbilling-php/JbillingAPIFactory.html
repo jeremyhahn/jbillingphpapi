@@ -21,8 +21,11 @@
 					</div>
 	<div class="info-box-body">
         		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_src---JbillingAPIFactory.php.html">/src/JbillingAPIFactory.php</a> (line <span class="field">55</span>)
+			Located in <a class="field" href="_src---JbillingAPIFactory.php.html">/src/JbillingAPIFactory.php</a> (line <span class="field">53</span>)
 		</p>
 		
 				
@@ -43,13 +46,37 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-												<div class="method-definition">
-					static 						<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPIFactory.html">JbillingAPIFactory</a></span>
+										
+				<div class="method-definition">
+					static 						<span class="method-result">jBilling</span>
 										<a href="#getAPI" title="details" class="method-name">getAPI</a>
-											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$password</span>)
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$endpoint</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$password</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">JBILLINGAPI_TYPE_CXF</span>])
 									</div>
-								
-												</div>
+																																																										
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastRequest" title="details" class="method-name">getLastRequest</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastRequestHeaders" title="details" class="method-name">getLastRequestHeaders</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastResponse" title="details" class="method-name">getLastResponse</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastResponseHeaders" title="details" class="method-name">getLastResponseHeaders</a>
+										()
+									</div>
+											</div>
 		</div>
 	</div>		
 
@@ -68,47 +95,140 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">static method getAPI</span> (line <span class="line-number">73</span>)
+		<span class="method-title">static getAPI</span> (line <span class="line-number">70</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Create the getAPI method which returns a singleton object of the WSDLAPI  NOTE: You can modify this routine to automatically retrieve your Jbilling API connection parameters or add another        API type, such as creating another API provider which uses PHP/Java integration performing native calls to EJBAPI        rather than using AXIS WSDL.</p>
+<p class="short-description">Factory method responsible for returning a jBilling API instance.</p>
 	<ul class="tags">
-				<li><span class="field">return:</span> A singleton instance of JbillingAPIFactory which should be a handle to one of the supported jbilling PHP wrapper API providers</li>
+				<li><span class="field">return:</span> API instance</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-	    static
-		<span class="method-result"><a href="../com-makeabyte-contrib-jbilling-php/JbillingAPIFactory.html">JbillingAPIFactory</a></span>
+		static <span class="method-result">jBilling</span>
 		<span class="method-name">
 			getAPI
 		</span>
-					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$password</span>)
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$endpoint</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$password</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">JBILLINGAPI_TYPE_CXF</span>])
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type">Integer</span>
-				<span class="var-name">$url</span><span class="var-description">: The uniform resource locator of the jbilling WSDL provider</span>			</li>
+				<span class="var-type">String</span>
+				<span class="var-name">$endpoint</span><span class="var-description">: The location of the endpoint</span>			</li>
 					<li>
 				<span class="var-type">String</span>
-				<span class="var-name">$username</span><span class="var-description">: The username of the jbilling API account to use for WSDL connection</span>			</li>
+				<span class="var-name">$username</span><span class="var-description">: The jBilling endpoint username</span>			</li>
 					<li>
 				<span class="var-type">String</span>
-				<span class="var-name">$password</span><span class="var-description">: The password used to authenticate the jbilling WSDL API account</span>			</li>
+				<span class="var-name">$password</span><span class="var-description">: The jBilling endpoint password</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$type</span><span class="var-description">: The jBilling API type (CXF|HESSIAN).</span>			</li>
 				</ul>
 		
 			
 	</div>
-
+<a name="methodgetLastRequest" id="getLastRequest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastRequest</span> (line <span class="line-number">107</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastRequest
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLastRequestHeaders" id="getLastRequestHeaders"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastRequestHeaders</span> (line <span class="line-number">108</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastRequestHeaders
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLastResponse" id="getLastResponse"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastResponse</span> (line <span class="line-number">109</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastResponse
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLastResponseHeaders" id="getLastResponseHeaders"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastResponseHeaders</span> (line <span class="line-number">110</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastResponseHeaders
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
 						
 		</div>
 	</div>
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 07 Sep 2009 19:28:12 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+		Documentation generated on Fri, 09 Oct 2009 14:22:35 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
 	</p>
 	</div></body>
 </html>

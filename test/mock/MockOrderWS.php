@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * @package com.makeabyte.contrib.jbilling.php.test
+ * @package com.makeabyte.contrib.jbilling.php.test.mock
  */
 
 class MockOrderWS extends MockObject {
@@ -24,14 +24,14 @@ class MockOrderWS extends MockObject {
 	  private $OrderWS;
 
 	  public function MockOrderWS() {
-	  	
+
 	  	     $OrderWS = new OrderWS();
 
-	  	     $OrderWS->setPeriod( 1 ); // Monthly
-			 $OrderWS->setBillingTypeId( 1 );
-			 $OrderWS->setCurrencyId( 1 ); // US Dollar
-			 $OrderWS->getBillingTypeId( 1 );  // Pre-paid
-			 $OrderWS->setUserId( 22 ); // Penny bright
+        	 $OrderWS->setUserId( ORDER_USERID );
+	  	     $OrderWS->setPeriod( ORDER_PERIOD );
+			 $OrderWS->setBillingTypeId( ORDER_BILLINGTYPEID );
+			 $OrderWS->setCurrencyId( ORDER_CURRENCYID );
+			 $OrderWS->setDeleted( 0 );
 
 			 $this->OrderWS = $OrderWS;
 	  }

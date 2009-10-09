@@ -49,193 +49,313 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																																																																																																																																																																																																																																												
-												<div class="method-definition">
+																																																																																																																																																																																																																																																																																																																																																																																																																																						
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#applyPayment" title="details" class="method-name">applyPayment</a>
 											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#authenticate" title="details" class="method-name">authenticate</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$password</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#create" title="details" class="method-name">create</a>
 											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#createInvoice" title="details" class="method-name">createInvoice</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$onlyRecurring</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#createItem" title="details" class="method-name">createItem</a>
 											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>&nbsp;<span class="var-name">$dto</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#createOrder" title="details" class="method-name">createOrder</a>
 											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#createOrderAndInvoice" title="details" class="method-name">createOrderAndInvoice</a>
 											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#createOrderPreAuthorize" title="details" class="method-name">createOrderPreAuthorize</a>
 											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#createUser" title="details" class="method-name">createUser</a>
-											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$newUser</span>)
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#deleteInvoice" title="details" class="method-name">deleteInvoice</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$invoiceId</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#deleteOrder" title="details" class="method-name">deleteOrder</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#deleteOrder" title="details" class="method-name">deleteOrder</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$orderId</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#deleteUser" title="details" class="method-name">deleteUser</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getAllItems" title="details" class="method-name">getAllItems</a>
 										()
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getCurrentOrder" title="details" class="method-name">getCurrentOrder</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$date</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getInvoicesByDate" title="details" class="method-name">getInvoicesByDate</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$since</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$until</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getInvoiceWS" title="details" class="method-name">getInvoiceWS</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$invoiceId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getItem" title="details" class="method-name">getItem</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$itemId</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$pricingFields</span> = <span class="var-default">array()</span>])
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getLastInvoices" title="details" class="method-name">getLastInvoices</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$number</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastInvoicesByItemType" title="details" class="method-name">getLastInvoicesByItemType</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemTypeId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$number</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getLastOrders" title="details" class="method-name">getLastOrders</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$number</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLastOrdersByItemType" title="details" class="method-name">getLastOrdersByItemType</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemTypeId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$number</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getLastPayments" title="details" class="method-name">getLastPayments</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$number</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getLatestInvoice" title="details" class="method-name">getLatestInvoice</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLatestInvoiceByItemType" title="details" class="method-name">getLatestInvoiceByItemType</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemTypeId</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getLatestOrder" title="details" class="method-name">getLatestOrder</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLatestOrderByItemType" title="details" class="method-name">getLatestOrderByItemType</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemTypeId</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getLatestPayment" title="details" class="method-name">getLatestPayment</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getOrder" title="details" class="method-name">getOrder</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$orderId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getOrderByPeriod" title="details" class="method-name">getOrderByPeriod</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$periodId</span>)
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userID</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$periodId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getOrderLine" title="details" class="method-name">getOrderLine</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$orderLineId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getPayment" title="details" class="method-name">getPayment</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$paymentId</span>)
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$paymentId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>)
 									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#getUserContactsWS" title="details" class="method-name">getUserContactsWS</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
-									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getUserId" title="details" class="method-name">getUserId</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getUserItemsByCategory" title="details" class="method-name">getUserItemsByCategory</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$categoryId</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getUsersByCustomField" title="details" class="method-name">getUsersByCustomField</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$typeId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getUsersInStatus" title="details" class="method-name">getUsersInStatus</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$statusId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getUsersNotInStatus" title="details" class="method-name">getUsersNotInStatus</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$statusId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getUserTransitions" title="details" class="method-name">getUserTransitions</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$from</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$to</span>)
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$to</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$from</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getUserTransitionsAfterId" title="details" class="method-name">getUserTransitionsAfterId</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#getUserWS" title="details" class="method-name">getUserWS</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#isUserSubscribedTo" title="details" class="method-name">isUserSubscribedTo</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemId</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#payInvoice" title="details" class="method-name">payInvoice</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$invoiceId</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#processPayment" title="details" class="method-name">processPayment</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#rateOrder" title="details" class="method-name">rateOrder</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#updateCreditCard" title="details" class="method-name">updateCreditCard</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/CreditCardDTO.html">CreditCardDTO</a></span>&nbsp;<span class="var-name">$creditCard</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#updateCurrentOrder" title="details" class="method-name">updateCurrentOrder</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$lines</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fields</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$date</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$eventDescription</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#updateItem" title="details" class="method-name">updateItem</a>
+											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>&nbsp;<span class="var-name">$item</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#updateOrder" title="details" class="method-name">updateOrder</a>
 											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#updateOrderLine" title="details" class="method-name">updateOrderLine</a>
 											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderLineWS.html">OrderLineWS</a></span>&nbsp;<span class="var-name">$line</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#updateUser" title="details" class="method-name">updateUser</a>
 											(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#updateUserContact" title="details" class="method-name">updateUserContact</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$typeId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ContactWS.html">ContactWS</a></span>&nbsp;<span class="var-name">$contact</span>)
 									</div>
-								</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#validatePurchase" title="details" class="method-name">validatePurchase</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fields</span>)
+									</div>
+											</div>
 		</div>
 	</div>		
 
@@ -250,12 +370,11 @@
 		</div>
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
-
 <a name="methodapplyPayment" id="applyPayment"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">applyPayment</span> (line <span class="line-number">61</span>)
+		<span class="method-title">applyPayment</span> (line <span class="line-number">57</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -283,10 +402,10 @@
 			
 	</div>
 <a name="methodauthenticate" id="authenticate"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">authenticate</span> (line <span class="line-number">68</span>)
+		<span class="method-title">authenticate</span> (line <span class="line-number">48</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -314,10 +433,10 @@
 			
 	</div>
 <a name="methodcreate" id="create"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">create</span> (line <span class="line-number">47</span>)
+		<span class="method-title">create</span> (line <span class="line-number">69</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -344,11 +463,42 @@
 		
 			
 	</div>
+<a name="methodcreateInvoice" id="createInvoice"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createInvoice</span> (line <span class="line-number">67</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			createInvoice
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$onlyRecurring</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$onlyRecurring</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodcreateItem" id="createItem"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">createItem</span> (line <span class="line-number">65</span>)
+		<span class="method-title">createItem</span> (line <span class="line-number">45</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -376,7 +526,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">createOrder</span> (line <span class="line-number">51</span>)
+		<span class="method-title">createOrder</span> (line <span class="line-number">54</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -404,7 +554,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">createOrderAndInvoice</span> (line <span class="line-number">52</span>)
+		<span class="method-title">createOrderAndInvoice</span> (line <span class="line-number">70</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -432,7 +582,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">createOrderPreAuthorize</span> (line <span class="line-number">50</span>)
+		<span class="method-title">createOrderPreAuthorize</span> (line <span class="line-number">46</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -460,7 +610,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">createUser</span> (line <span class="line-number">36</span>)
+		<span class="method-title">createUser</span> (line <span class="line-number">58</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -473,13 +623,13 @@
 		<span class="method-name">
 			createUser
 		</span>
-					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$newUser</span>)
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>
-				<span class="var-name">$newUser</span>			</li>
+				<span class="var-name">$user</span>			</li>
 				</ul>
 		
 			
@@ -488,7 +638,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">deleteInvoice</span> (line <span class="line-number">38</span>)
+		<span class="method-title">deleteInvoice</span> (line <span class="line-number">33</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -501,13 +651,13 @@
 		<span class="method-name">
 			deleteInvoice
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$invoiceId</span>)
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type"></span>
-				<span class="var-name">$invoiceId</span>			</li>
+				<span class="var-name">$id</span>			</li>
 				</ul>
 		
 			
@@ -516,7 +666,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">deleteOrder</span> (line <span class="line-number">60</span>)
+		<span class="method-title">deleteOrder</span> (line <span class="line-number">66</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -529,13 +679,13 @@
 		<span class="method-name">
 			deleteOrder
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$orderId</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type"></span>
-				<span class="var-name">$id</span>			</li>
+				<span class="var-name">$orderId</span>			</li>
 				</ul>
 		
 			
@@ -544,7 +694,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">deleteUser</span> (line <span class="line-number">37</span>)
+		<span class="method-title">deleteUser</span> (line <span class="line-number">62</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -572,7 +722,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getAllItems</span> (line <span class="line-number">66</span>)
+		<span class="method-title">getAllItems</span> (line <span class="line-number">78</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -591,11 +741,42 @@
 		
 			
 	</div>
-<a name="methodgetInvoicesByDate" id="getInvoicesByDate"><!-- --></a>
+<a name="methodgetCurrentOrder" id="getCurrentOrder"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getInvoicesByDate</span> (line <span class="line-number">35</span>)
+		<span class="method-title">getCurrentOrder</span> (line <span class="line-number">47</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getCurrentOrder
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$date</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$date</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInvoicesByDate" id="getInvoicesByDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getInvoicesByDate</span> (line <span class="line-number">59</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -623,10 +804,10 @@
 			
 	</div>
 <a name="methodgetInvoiceWS" id="getInvoiceWS"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getInvoiceWS</span> (line <span class="line-number">32</span>)
+		<span class="method-title">getInvoiceWS</span> (line <span class="line-number">82</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -650,11 +831,45 @@
 		
 			
 	</div>
+<a name="methodgetItem" id="getItem"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getItem</span> (line <span class="line-number">53</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getItem
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$itemId</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$pricingFields</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$itemId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$pricingFields</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodgetLastInvoices" id="getLastInvoices"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getLastInvoices</span> (line <span class="line-number">34</span>)
+		<span class="method-title">getLastInvoices</span> (line <span class="line-number">51</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -681,11 +896,45 @@
 		
 			
 	</div>
-<a name="methodgetLastOrders" id="getLastOrders"><!-- --></a>
+<a name="methodgetLastInvoicesByItemType" id="getLastInvoicesByItemType"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getLastOrders</span> (line <span class="line-number">59</span>)
+		<span class="method-title">getLastInvoicesByItemType</span> (line <span class="line-number">44</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastInvoicesByItemType
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemTypeId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$number</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$itemTypeId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$number</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLastOrders" id="getLastOrders"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastOrders</span> (line <span class="line-number">36</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -712,11 +961,45 @@
 		
 			
 	</div>
+<a name="methodgetLastOrdersByItemType" id="getLastOrdersByItemType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastOrdersByItemType</span> (line <span class="line-number">77</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLastOrdersByItemType
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemTypeId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$number</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$itemTypeId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$number</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodgetLastPayments" id="getLastPayments"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getLastPayments</span> (line <span class="line-number">64</span>)
+		<span class="method-title">getLastPayments</span> (line <span class="line-number">60</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -747,7 +1030,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getLatestInvoice</span> (line <span class="line-number">33</span>)
+		<span class="method-title">getLatestInvoice</span> (line <span class="line-number">32</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -771,11 +1054,42 @@
 		
 			
 	</div>
-<a name="methodgetLatestOrder" id="getLatestOrder"><!-- --></a>
+<a name="methodgetLatestInvoiceByItemType" id="getLatestInvoiceByItemType"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getLatestOrder</span> (line <span class="line-number">58</span>)
+		<span class="method-title">getLatestInvoiceByItemType</span> (line <span class="line-number">80</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLatestInvoiceByItemType
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemTypeId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$itemTypeId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLatestOrder" id="getLatestOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLatestOrder</span> (line <span class="line-number">34</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -795,6 +1109,37 @@
 					<li>
 				<span class="var-type"></span>
 				<span class="var-name">$userId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLatestOrderByItemType" id="getLatestOrderByItemType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLatestOrderByItemType</span> (line <span class="line-number">73</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLatestOrderByItemType
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemTypeId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$itemTypeId</span>			</li>
 				</ul>
 		
 			
@@ -831,7 +1176,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getOrder</span> (line <span class="line-number">54</span>)
+		<span class="method-title">getOrder</span> (line <span class="line-number">71</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -859,7 +1204,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getOrderByPeriod</span> (line <span class="line-number">55</span>)
+		<span class="method-title">getOrderByPeriod</span> (line <span class="line-number">74</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -872,13 +1217,13 @@
 		<span class="method-name">
 			getOrderByPeriod
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$periodId</span>)
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userID</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$periodId</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type"></span>
-				<span class="var-name">$userId</span>			</li>
+				<span class="var-name">$userID</span>			</li>
 					<li>
 				<span class="var-type"></span>
 				<span class="var-name">$periodId</span>			</li>
@@ -890,7 +1235,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getOrderLine</span> (line <span class="line-number">56</span>)
+		<span class="method-title">getOrderLine</span> (line <span class="line-number">76</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -918,7 +1263,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getPayment</span> (line <span class="line-number">62</span>)
+		<span class="method-title">getPayment</span> (line <span class="line-number">41</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -931,50 +1276,25 @@
 		<span class="method-name">
 			getPayment
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$paymentId</span>)
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$paymentId</span>, <span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type"></span>
 				<span class="var-name">$paymentId</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetUserContactsWS" id="getUserContactsWS"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getUserContactsWS</span> (line <span class="line-number">42</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			getUserContactsWS
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
-			</div>
-	
-			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$userId</span>			</li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>
+				<span class="var-name">$payment</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="methodgetUserId" id="getUserId"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUserId</span> (line <span class="line-number">43</span>)
+		<span class="method-title">getUserId</span> (line <span class="line-number">52</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -998,11 +1318,42 @@
 		
 			
 	</div>
+<a name="methodgetUserItemsByCategory" id="getUserItemsByCategory"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserItemsByCategory</span> (line <span class="line-number">40</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getUserItemsByCategory
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$categoryId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$categoryId</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodgetUsersByCustomField" id="getUsersByCustomField"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUsersByCustomField</span> (line <span class="line-number">46</span>)
+		<span class="method-title">getUsersByCustomField</span> (line <span class="line-number">61</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1033,7 +1384,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUsersInStatus</span> (line <span class="line-number">44</span>)
+		<span class="method-title">getUsersInStatus</span> (line <span class="line-number">50</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1061,7 +1412,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUsersNotInStatus</span> (line <span class="line-number">45</span>)
+		<span class="method-title">getUsersNotInStatus</span> (line <span class="line-number">49</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1089,7 +1440,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUserTransitions</span> (line <span class="line-number">67</span>)
+		<span class="method-title">getUserTransitions</span> (line <span class="line-number">56</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1102,25 +1453,53 @@
 		<span class="method-name">
 			getUserTransitions
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$from</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$to</span>)
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$to</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$from</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type"></span>
-				<span class="var-name">$from</span>			</li>
+				<span class="var-name">$to</span>			</li>
 					<li>
 				<span class="var-type"></span>
-				<span class="var-name">$to</span>			</li>
+				<span class="var-name">$from</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUserTransitionsAfterId" id="getUserTransitionsAfterId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserTransitionsAfterId</span> (line <span class="line-number">68</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getUserTransitionsAfterId
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="methodgetUserWS" id="getUserWS"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUserWS</span> (line <span class="line-number">41</span>)
+		<span class="method-title">getUserWS</span> (line <span class="line-number">42</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1133,13 +1512,44 @@
 		<span class="method-name">
 			getUserWS
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>&nbsp;<span class="var-name">$user</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/UserWS.html">UserWS</a></span>
+				<span class="var-name">$user</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisUserSubscribedTo" id="isUserSubscribedTo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isUserSubscribedTo</span> (line <span class="line-number">64</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isUserSubscribedTo
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemId</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type"></span>
 				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$itemId</span>			</li>
 				</ul>
 		
 			
@@ -1148,7 +1558,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">payInvoice</span> (line <span class="line-number">48</span>)
+		<span class="method-title">payInvoice</span> (line <span class="line-number">37</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1172,11 +1582,67 @@
 		
 			
 	</div>
+<a name="methodprocessPayment" id="processPayment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">processPayment</span> (line <span class="line-number">35</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			processPayment
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>&nbsp;<span class="var-name">$payment</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/PaymentWS.html">PaymentWS</a></span>
+				<span class="var-name">$payment</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrateOrder" id="rateOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">rateOrder</span> (line <span class="line-number">81</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rateOrder
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>&nbsp;<span class="var-name">$order</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/OrderWS.html">OrderWS</a></span>
+				<span class="var-name">$order</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodupdateCreditCard" id="updateCreditCard"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">updateCreditCard</span> (line <span class="line-number">49</span>)
+		<span class="method-title">updateCreditCard</span> (line <span class="line-number">79</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1203,11 +1669,79 @@
 		
 			
 	</div>
+<a name="methodupdateCurrentOrder" id="updateCurrentOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateCurrentOrder</span> (line <span class="line-number">75</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			updateCurrentOrder
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$lines</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fields</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$date</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$eventDescription</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$lines</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$fields</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$date</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$eventDescription</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdateItem" id="updateItem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateItem</span> (line <span class="line-number">38</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			updateItem
+		</span>
+					(<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>&nbsp;<span class="var-name">$item</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../com-makeabyte-contrib-jbilling-php/ItemDTOEx.html">ItemDTOEx</a></span>
+				<span class="var-name">$item</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodupdateOrder" id="updateOrder"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">updateOrder</span> (line <span class="line-number">53</span>)
+		<span class="method-title">updateOrder</span> (line <span class="line-number">72</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1235,7 +1769,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">updateOrderLine</span> (line <span class="line-number">57</span>)
+		<span class="method-title">updateOrderLine</span> (line <span class="line-number">65</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1263,7 +1797,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">updateUser</span> (line <span class="line-number">40</span>)
+		<span class="method-title">updateUser</span> (line <span class="line-number">55</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1321,13 +1855,47 @@
 		
 			
 	</div>
+<a name="methodvalidatePurchase" id="validatePurchase"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validatePurchase</span> (line <span class="line-number">43</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			validatePurchase
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$itemId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fields</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$itemId</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$fields</span>			</li>
+				</ul>
+		
+			
+	</div>
 						
 		</div>
 	</div>
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 07 Sep 2009 19:28:12 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+		Documentation generated on Fri, 09 Oct 2009 14:22:35 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
 	</p>
 	</div></body>
 </html>

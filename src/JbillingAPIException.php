@@ -20,34 +20,43 @@
  */
 
 /**
-  * JbillingAPIException
-  * @author Jeremy Hahn
-  * @version 1.0
-  * @copyright Make A Byte, inc
-  * @package com.makeabyte.contrib.jbilling.php
-  */
+ * JbillingAPIException
+ * @author Jeremy Hahn
+ * @version 2.0
+ * @copyright Make A Byte, inc
+ * @package com.makeabyte.contrib.jbilling.php
+ */
 
 class JbillingAPIException extends Exception {
 
-      var $code;
-      var $message;
-      var $soapFault;
-      
-      public function __construct( $message, $code=0 ) { 
+	  private $e;
 
-      	     parent::__construct( $message, $code );
+	  /**
+	   * Initalizes JbillingAPIException
+	   * 
+	   * @param $message The exception message string or an instance of SoapFault
+	   * @param $code The exception code
+	   * @return void
+	   */
+      public function __construct( $message, $code=0 ) {
+
+      		 if( $message instanceof SoapFault ) {
+
+      		 	 $this->e = $message;
+      		 	 parent::__construct( (string)$message->faultstring, (integer)$message->faultcode );
+      		 }
+      		 else
+	      	     parent::__construct( $message, $code );
       }
-      /**
-       * The JbillingAPIException constructor
-       * 
-       * @access public
-       * @param Integer $code The exception code
-       * @param String Smessage The exception message
-       */
-      public function JbillingAPIException( $message, $code, $soapFault ) {
 
-             $this->code      = $code;
-             $this->message   = $message;
+      /**
+       * Displays the state of the exception instance 
+       * 
+       * @return void
+       */
+      public function debug() {
+
+      		 print_r( $this->e );
       }
 }
 ?>

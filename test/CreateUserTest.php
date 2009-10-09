@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * jbilling-php-api
  * Copyright (C) 2007-2009  Make A Byte, inc
@@ -17,16 +17,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * @package com.makeabyte.contrib.jbilling.php.test
- */.
+ */
 
 require_once 'BaseTest.php';
 
 class CreateUserTest extends BaseTest {
 
-	  public function CreateUserTest() { }
-
 	  public function test() {
-	  	
+
 	         $MockContactWS = new MockContactWS();
 	  	     $MockCreditCardDTO = new MockCreditCardDTO();
 
@@ -37,10 +35,11 @@ class CreateUserTest extends BaseTest {
 	  	  	 try {
 	  		 	   $actual = $this->api->createUser( $MockUserWS->getObject() );
 			       PHPUnit_Framework_Assert::assertGreaterThan( 0, $actual, "User already exists!" );
+			       PHPUnit_Framework_Assert::assertNotNull( $actual, "Failed to create user" );
 			 }
-			 catch( JbillingAPIException $jbex ) {
+			 catch( JbillingAPIException $e ) {
 
-			 	    PHPUnit_Framework_Assert::fail( $jbex->getMessage() );
+			 	    PHPUnit_Framework_Assert::fail( $e->getMessage() );
 			 }
 	  }
 }

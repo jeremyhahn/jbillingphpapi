@@ -24,10 +24,6 @@ require_once 'BaseTest.php';
 
 class ApplyPaymentTest extends BaseTest {
 
-	  private $invoiceId = 2304;
-
-	  public function ApplyPaymentTest() { }
-
 	  public function test() {
 
 	  		 $MockPaymentWS = new MockPaymentWS();
@@ -36,12 +32,12 @@ class ApplyPaymentTest extends BaseTest {
              $MockPaymentWS->setCheque( $MockPaymentInfoChequeDTO->getObject() );
 
 	  	  	 try {
-	  		 	   $actual = $this->api->applyPayment( $MockPaymentWS->getObject(), $this->invoiceId );
-			       PHPUnit_Framework_Assert::assertGreaterThan( 0, $actual, "Order already exists!" );
+	  		 	   $actual = $this->api->applyPayment( $MockPaymentWS->getObject(), INVOICE_ID );
+			       PHPUnit_Framework_Assert::assertGreaterThan( 0, $actual, "Payment already applied" );
 			 }
-			 catch( JbillingAPIException $jbex ) {
+			 catch( JbillingAPIException $e ) {
 
-			 	    PHPUnit_Framework_Assert::fail( $jbex->getMessage() );
+			 	    PHPUnit_Framework_Assert::fail( $e->getMessage() );
 			 }
 	  }
 }

@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class HessianWriter</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class HessianWriter</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">&lt;BLOCKQUOTE&gt;  Hessian protocol writer, inspired and partially based on hessianlib.py by Caucho.</p>
+<p class="description"><p><br />  TODO:  <ul><li>Handling of _hessian_write function</li></ul>  &lt;/BLOCKQUOTE&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Manolo Gómez</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2004</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---HessianPHP---dist---Protocol.php.html">/lib/HessianPHP/dist/Protocol.php</a> (line <span class="field">489</span>)
+		</p>
+		
+				
+		<pre><a href="../HessianPHP-Protocol/HessianProtocolHandler.html">HessianProtocolHandler</a>
+   |
+   --HessianWriter</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$fault" title="details" class="var-name">$fault</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isArrayAssoc" title="details" class="method-name">isArrayAssoc</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">&$array</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isList" title="details" class="method-name">isList</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">&$array</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setFault" title="details" class="method-name">setFault</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$detail</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeBool" title="details" class="method-name">writeBool</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeBytes" title="details" class="method-name">writeBytes</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#writeCall" title="details" class="method-name">writeCall</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$params</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeDate" title="details" class="method-name">writeDate</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeDouble" title="details" class="method-name">writeDouble</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeFault" title="details" class="method-name">writeFault</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$code</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$message</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$detail</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeHeader" title="details" class="method-name">writeHeader</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeInt" title="details" class="method-name">writeInt</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeList" title="details" class="method-name">writeList</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeLong" title="details" class="method-name">writeLong</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeMap" title="details" class="method-name">writeMap</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeObject" title="details" class="method-name">writeObject</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">&$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#writeReference" title="details" class="method-name">writeReference</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">&$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#writeReply" title="details" class="method-name">writeReply</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$object</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeResource" title="details" class="method-name">writeResource</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$handle</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeString" title="details" class="method-name">writeString</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#writeStringData" title="details" class="method-name">writeStringData</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$fault" id="$fault"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$fault</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">491</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html">HessianProtocolHandler</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$dateProvider">HessianProtocolHandler::$dateProvider</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$error">HessianProtocolHandler::$error</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$len">HessianProtocolHandler::$len</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$pos">HessianProtocolHandler::$pos</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$refs">HessianProtocolHandler::$refs</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$stream">HessianProtocolHandler::$stream</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#var$typemap">HessianProtocolHandler::$typemap</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodisArrayAssoc" id="isArrayAssoc"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isArrayAssoc</span> (line <span class="line-number">752</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Very simple way to check if an array is associative. PHP doesn't have a way to tell  an associative array from one that only has numbers as keys.</p>
+<p class="description"><p>Never mind the foreach, it's *faster* than other ways.  Stops when a key is of string type or the key is negative, yes, you are read it well,  array keys can be negative (and also null, and false, and...)</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> is associative?</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isArrayAssoc
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$array</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$array</span><span class="var-description">: array Array to check</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisList" id="isList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isList</span> (line <span class="line-number">776</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">EXPERIMENTAL: Algorithm to check if a php associative array is *exactly* an</p>
+<p class="description"><p>ordered list. It uses a property of ordered lists numeric keys, they correspond  to the 0,1,2...n series of continuous integers, therefore you can check if  an array is an ordered list by calculating the sum of its keys by hand and then  using a formula. If both values match, it is an ordered list.</p><p>Just Slightly slower than isArrayAssoc but safer. (currently not being used)</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> is an ordered list?</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isList
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$array</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$array</span><span class="var-description">: array Array to check</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFault" id="setFault"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setFault</span> (line <span class="line-number">502</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the reply as a fault, following Hessian spec</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setFault
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$detail</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$code</span><span class="var-description">: code Code number of the fault</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: message Descriptive message of the fault</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$detail</span><span class="var-description">: detail Optional argument with detail of the fault, usually a stack trace</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteBool" id="writeBool"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeBool</span> (line <span class="line-number">575</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeBool
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteBytes" id="writeBytes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeBytes</span> (line <span class="line-number">590</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeBytes
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteCall" id="writeCall"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeCall</span> (line <span class="line-number">562</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes a Hessian method call and serializes arguments.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Hessian call</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			writeCall
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$method</span><span class="var-description">: method Method to be called</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$params</span><span class="var-description">: params Arguments of the method</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteDate" id="writeDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeDate</span> (line <span class="line-number">624</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeDate
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteDouble" id="writeDouble"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeDouble</span> (line <span class="line-number">639</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeDouble
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteFault" id="writeFault"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeFault</span> (line <span class="line-number">596</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeFault
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$code</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$message</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$detail</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$code</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$message</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$detail</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteHeader" id="writeHeader"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeHeader</span> (line <span class="line-number">585</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeHeader
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteInt" id="writeInt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeInt</span> (line <span class="line-number">610</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeInt
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteList" id="writeList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeList</span> (line <span class="line-number">676</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeList
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteLong" id="writeLong"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeLong</span> (line <span class="line-number">616</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeLong
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteMap" id="writeMap"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeMap</span> (line <span class="line-number">694</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeMap
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteObject" id="writeObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeObject</span> (line <span class="line-number">512</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Serializes a PHP value into a Hessian stream using reflection. Depending on the type  it calls one of the writing functions of this class.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeObject
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">&$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">&$value</span><span class="var-description">: value Value to be serialized</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteReference" id="writeReference"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeReference</span> (line <span class="line-number">659</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks internal reference map to see if an object has already been written to output stream.</p>
+<p class="description"><p>If it has, it only writes a reference to it and returns true, otherwise returns false</p><p>WARNING: in PHP4, don't use circular references or this function will crash!</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> is reference writen?</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			writeReference
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">&$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">&$value</span><span class="var-description">: value object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteReply" id="writeReply"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeReply</span> (line <span class="line-number">540</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes a Hessian reply with a return object. If a fault has been set, it writes the fault instead</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Hessian reply</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			writeReply
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$object</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$object</span><span class="var-description">: object Object to be returned in the reply</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteResource" id="writeResource"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeResource</span> (line <span class="line-number">793</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeResource
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$handle</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$handle</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteString" id="writeString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeString</span> (line <span class="line-number">580</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeString
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteStringData" id="writeStringData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeStringData</span> (line <span class="line-number">644</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			writeStringData
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html">HessianProtocolHandler</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodHessianProtocolHandler">HessianProtocolHandler::HessianProtocolHandler()</a></span><br>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodclearRefs">HessianProtocolHandler::clearRefs()</a></span><br>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodsetDateProvider">HessianProtocolHandler::setDateProvider()</a></span><br>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodsetStream">HessianProtocolHandler::setStream()</a></span><br>
+													<span class="method-name"><a href="../HessianPHP-Protocol/HessianProtocolHandler.html#methodsetTypeMap">HessianProtocolHandler::setTypeMap()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 09 Oct 2009 14:22:36 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

@@ -29,28 +29,111 @@
 
 class ItemDTOEx {
 
-  	  var $currencyId;        // Identifier for the currency in which the item's price is expressed. See Appendix A for a list of acceptable values.
-      var $deleted;           // A flag that indicates if this record is logically deleted in the database. This allows for ‘undo’ of deletions. Valid values are: 0 – the record is not deleted 1 – the record is considered deleted.
-      var $description;       // The description of this item entityId  Integer Identifier for the entity to which this item belongs.
-      var $id;                // A unique number that identifies this record.
-      var $number;            // This can be used to identify this item following an external coding system. For example, books can be identified by their ISBN codes.
-      var $orderLineTypeId;   // The order type that this item will generate, such a 'taxes', or 'items'.
-      var $percentage;        // If this is a percentage item, its rate is specified in this field.
-      var $price;             // The price of this item or null if this is a percentage item.
-      var $priceManual;       // A flag that indicates if this item will allow manual edition of the price when a purchase order is being placed with the web-based application. A value of 1 will allow manual editing, while a value of 0 will display the price as a read-only field.
-      var $prices;            // An item can have many prices, one per currency. This is an array of ItemPriceDTOEx with all the available prices for this item.
-      var $promoCode;         // If this item is related to a promotion, this is the code that identifies the promotion.
-      var $types;             // A list of type identifiers that indicates to which types[] (categories) this item belongs. An item has to belong to at least one type. Item types are created from the web-based GUI by the billing administrator.      
+	  /**
+	   * Identifier for the currency in which the item's price is expressed. See Appendix A for a list of acceptable values.
+	   * 
+	   * @var Integer
+	   */
+  	  var $currencyId;
+
+  	  /**
+  	   * A flag that indicates if this record is logically deleted in the database. This allows for ‘undo’ of deletions.
+  	   * Valid values are: 0 – the record is not deleted 1 – the record is considered deleted.
+  	   * 
+  	   * @var Integer
+  	   */
+      var $deleted;
+      
+      /**
+       * The description of this item entityId  Integer Identifier for the entity to which this item belongs.
+       * 
+       * @var String
+       */
+      var $description;
+      
+      /**
+       * A unique number that identifies this record.
+       * 
+       * @var 
+       */
+      var $id;
+      
+      /**
+       * This can be used to identify this item following an external coding system. For example,
+       *  books can be identified by their ISBN codes.
+       * 
+       * @var String
+       */
+      var $number;
+      
+      /**
+       * The order type that this item will generate, such a 'taxes', or 'items'.
+       * 
+       * @var Integer
+       */
+      var $orderLineTypeId;
+      
+      /**
+       * If this is a percentage item, its rate is specified in this field.
+       * 
+       * @var Float
+       */
+      var $percentage;
+      
+      /**
+       * The price of this item or null if this is a percentage item.
+       * 
+       * @var Float
+       */
+      var $price;
 
       /**
-       * The CreateResponseWS constructor
+       * A flag that indicates if this item will allow manual edition of the price when a
+       * purchase order is being placed with the web-based application. A value of 1 will
+       * allow manual editing, while a value of 0 will display the price as a read-only field.
+       * 
+       * @var Integer
+       */
+      var $priceManual;
+      
+      /**
+       * An item can have many prices, one per currency. This is an array of ItemPriceDTOEx
+       * with all the available prices for this item.
+       * 
+       * @var array
+       */
+      var $prices;
+      
+      /**
+       * If this item is related to a promotion, this is the code that identifies the promotion.
+       * 
+       * @var String
+       */
+      var $promoCode;
+      
+      /**
+       * A list of type identifiers that indicates to which types[] (categories) this item belongs.
+       * An item has to belong to at least one type. Item types are created from the web-based GUI
+       * by the billing administrator.
+       * 
+       * @var Integer[]
+       */
+      var $types;
+      
+      // Added in jBilling 2.0
+      
+      var $hasDecimals;
+      var $entityId;
+
+      /**
+       * The ItemDTOEx constructor
        * 
        * @access public
        */
 	  public function ItemDTOEx() {
 	  }
 	  /**
-	   * Sets the currencyId property of the CreateResponseWS object
+	   * Sets the currencyId property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param Integer $id Identifier for the currency in which the item's price is expressed. See Appendix A for a list of acceptable values.
@@ -61,7 +144,7 @@ class ItemDTOEx {
 	  	     $this->currencyId = $id;
 	  }
 	  /**
-	   * Sets the deleted property of the CreateResponseWS object
+	   * Sets the deleted property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param Integer $id A flag that indicates if this record is logically deleted in the database. This allows for ‘undo’ of deletions. Valid values are: 0 – the record is not deleted 1 – the record is considered deleted.
@@ -72,7 +155,7 @@ class ItemDTOEx {
 	  	     $this->id = $id;
 	  }
 	  /**
-	   * Sets the description property of the CreateResponseWS object
+	   * Sets the description property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param String $desc The description of this item
@@ -83,7 +166,7 @@ class ItemDTOEx {
 	  	     $this->description = $desc;
 	  }
 	  /**
-	   * Sets the entityId property of the CreateResponseWS object
+	   * Sets the entityId property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param Integer $id Identifier for the entity to which this item belongs.
@@ -94,7 +177,7 @@ class ItemDTOEx {
 	  	     $this->entityId = $id;
 	  }
 	  /**
-	   * Sets the id property of the CreateResponseWS object
+	   * Sets the id property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param Integer $id A unique number that identifies this record.
@@ -105,7 +188,7 @@ class ItemDTOEx {
 	  	     $this->id = $id;
 	  }
 	  /**
-	   * Sets the number property of the CreateResponseWS object
+	   * Sets the number property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param String $str This can be used to identify this item following an external coding system. For example, books can be identified by their ISBN codes.
@@ -116,7 +199,7 @@ class ItemDTOEx {
 	  	     $this->number = $int;
 	  }
 	  /**
-	   * Sets the orderLineTypeId property of the CreateResponseWS object
+	   * Sets the orderLineTypeId property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param String $str
@@ -127,7 +210,7 @@ class ItemDTOEx {
 	  	     $this->orderLineTypeId = $id;
 	  }
 	  /**
-	   * Sets the percentage property of the CreateResponseWS object
+	   * Sets the percentage property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param Float $price If this is a percentage item, its rate is specified in this field.
@@ -138,7 +221,7 @@ class ItemDTOEx {
 	  	     $this->percentage = $percentage;
 	  }
 	  /**
-	   * Sets the price property of the CreateResponseWS object
+	   * Sets the price property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param Float $price The price of this item or null if this is a percentage item.
@@ -149,7 +232,7 @@ class ItemDTOEx {
 	  	     $this->price = $price;
 	  }
 	  /**
-	   * Sets the priceManual property of the CreateResponseWS object
+	   * Sets the priceManual property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param Integer $flag A flag that indicates if this item will allow manual edition of the price when a purchase order is being placed with the web-based application. A value of 1 will allow manual editing, while a value of 0 will display the price as a read-only field.
@@ -160,7 +243,7 @@ class ItemDTOEx {
 	  	    $this->priceManual = $flag;
 	  }
 	  /**
-	   * Sets the prices property of the CreateResponseWS object
+	   * Sets the prices property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param Array $flag An item can have many prices, one per currency. This is an array of ItemPriceDTOEx with all the available prices for this item.
@@ -171,7 +254,7 @@ class ItemDTOEx {
 	  	     $this->prices = $prices;
 	  }
 	  /**
-	   * Sets the promoCode property of the CreateResponseWS object
+	   * Sets the promoCode property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @param Integer $flag
@@ -182,10 +265,10 @@ class ItemDTOEx {
 	  	     $this->promoCode = $code;
 	  }
 	  /**
-	   * Sets the types property of the CreateResponseWS object
+	   * Sets the types property of the ItemDTOEx object
 	   * 
 	   * @access public
-	   * @param Integer[] $flag If this item is related to a promotion, this is the code that identifies the promotion.
+	   * @param Integer[] $types If this item is related to a promotion, this is the code that identifies the promotion.
 	   * @return void
 	   */
 	  public function setTypes( $types ) {
@@ -193,7 +276,7 @@ class ItemDTOEx {
 	         $this->types = $types;
 	  }
 	  /**
-	   * Gets the currencyId property of the CreateResponseWS object
+	   * Gets the currencyId property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Integer Identifier for the currency in which the item's price is expressed. See Appendix A for a list of acceptable values.
@@ -203,7 +286,7 @@ class ItemDTOEx {
 	  	     return $this->currencyId;
 	  }
 	  /**
-	   * Gets the deleted property of the CreateResponseWS object
+	   * Gets the deleted property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Integer A flag that indicates if this record is logically deleted in the database. This allows for ‘undo’ of deletions. Valid values are: 0 – the record is not deleted 1 – the record is considered deleted.
@@ -213,7 +296,7 @@ class ItemDTOEx {
 	  	     return $this->id ;
 	  }
 	  /**
-	   * Gets the description property of the CreateResponseWS object
+	   * Gets the description property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return String The description of this item
@@ -223,7 +306,7 @@ class ItemDTOEx {
 	  	     return $this->description;
 	  }
 	  /**
-	   * Gets the entityId property of the CreateResponseWS object
+	   * Gets the entityId property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Integer Identifier for the entity to which this item belongs.
@@ -233,7 +316,7 @@ class ItemDTOEx {
 	  	     return $this->entityId;
 	  }
 	  /**
-	   * Gets the id property of the CreateResponseWS object
+	   * Gets the id property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Integer A unique number that identifies this record.
@@ -243,7 +326,7 @@ class ItemDTOEx {
 	  	     return $this->id;
 	  }
 	  /**
-	   * Gets the number property of the CreateResponseWS object
+	   * Gets the number property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return String This can be used to identify this item following an external coding system. For example, books can be identified by their ISBN codes.
@@ -253,7 +336,7 @@ class ItemDTOEx {
 	  	     return $this->number;
 	  }
 	  /**
-	   * Gets the orderLineTypeId property of the CreateResponseWS object
+	   * Gets the orderLineTypeId property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return String The order type that this item will generate, such a 'taxes', or 'items'.
@@ -263,7 +346,7 @@ class ItemDTOEx {
 	  	     return $this->orderLineTypeId;
 	  }
 	  /**
-	   * Gets the percentage property of the CreateResponseWS object
+	   * Gets the percentage property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Float If this is a percentage item, its rate is specified in this field.
@@ -273,7 +356,7 @@ class ItemDTOEx {
 	  	     return $this->percentage;
 	  }
 	  /**
-	   * Gets the price property of the CreateResponseWS object
+	   * Gets the price property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Float The price of this item or null if this is a percentage item.
@@ -283,7 +366,7 @@ class ItemDTOEx {
 	  	     return $this->price;
 	  }
 	  /**
-	   * Gets the priceManual property of the CreateResponseWS object
+	   * Gets the priceManual property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Integer A flag that indicates if this item will allow manual edition of the price when a purchase order is being placed with the web-based application. A value of 1 will allow manual editing, while a value of 0 will display the price as a read-only field.
@@ -293,7 +376,7 @@ class ItemDTOEx {
 	  	     return $this->priceManual;
 	  }
 	  /**
-	   * Gets the prices property of the CreateResponseWS object
+	   * Gets the prices property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Array An item can have many prices, one per currency. This is an array of ItemPriceDTOEx with all the available prices for this item.
@@ -303,7 +386,7 @@ class ItemDTOEx {
 	  	     return $this->prices;
 	  }
 	  /**
-	   * Gets the promoCode property of the CreateResponseWS object
+	   * Gets the promoCode property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Integer If this item is related to a promotion, this is the code that identifies the promotion.
@@ -313,7 +396,7 @@ class ItemDTOEx {
 	  	     return $this->promoCode;
 	  }
 	  /**
-	   * Gets the types property of the CreateResponseWS object
+	   * Gets the types property of the ItemDTOEx object
 	   * 
 	   * @access public
 	   * @return Integer[] If this item is related to a promotion, this is the code that identifies the promotion.
@@ -321,6 +404,25 @@ class ItemDTOEx {
 	  public function getTypes() {
 
 	         return $this->types;
+	  }
+	  /**
+	   * Sets the ItemDTOEx::hasDecimals field
+	   * 
+	   * @param Integer
+	   * @return void
+	   */
+	  public function setHasDecimals( $int ) {
+
+	  		 $this->hasDecimals = $int;
+	  }
+	  /**
+	   * Returns the ItemDTOEx::hasDecimals field
+	   *
+	   * @return void
+	   */
+	  public function getHasDecimals() {
+
+	  		 return $this->hasDecimals;
 	  }
 }
 ?>

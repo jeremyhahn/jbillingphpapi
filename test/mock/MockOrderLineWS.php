@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * @package com.makeabyte.contrib.jbilling.php.test
+ * @package com.makeabyte.contrib.jbilling.php.test.mock
  */
 
 class MockOrderLineWS extends MockObject {
@@ -26,13 +26,14 @@ class MockOrderLineWS extends MockObject {
 	  public function getObject() {
 
 	  	     $OrderLineWS = new OrderLineWS();
-	  	     $OrderLineWS->setUseItem( true );
-			 $OrderLineWS->setItemId( 1 ); // MAKE SURE THIS ITEM MATCHES AN ITEM YOUR SYSTEM!
-			 $OrderLineWS->setTypeId( 1 ); // Item
-			 $OrderLineWS->setQuantity( 1 );
-			 $OrderLineWS->setDescription( "This is an order placed by the jbilling-php-api unit test." );
+	  	     $OrderLineWS->setUseItem( ORDERLINE_USEITEM );
+			 $OrderLineWS->setItemId( ORDERLINE_ITEMID );
+			 $OrderLineWS->setTypeId( ORDERLINE_TYPEID );
+			 $OrderLineWS->setQuantity( ORDERLINE_QUANTITY );
+			 $OrderLineWS->setDescription( ORDERLINE_DESCRIPTION );
+			 $OrderLineWS->setDeleted( 0 );
 
-			 return array( $OrderLineWS );
+			 return $OrderLineWS;
 	  }
 }
 ?>

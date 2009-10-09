@@ -21,6 +21,7 @@
 
 require_once 'PHPUnit/Framework.php';
 require_once '../src/JbillingAPIFactory.php';
+require_once 'mock/MockConstants.php';
 
 abstract class BaseTest extends PHPUnit_Framework_TestCase {
 
@@ -28,7 +29,7 @@ abstract class BaseTest extends PHPUnit_Framework_TestCase {
 
          public function setUp() {
 
-	  	        $this->api = jbillingAPIFactory::getAPI( "http://localhost:81/jboss-net/services/billing?wsdl", "admin", "123qwe" );
+	  	        $this->api = JbillingAPIFactory::getAPI( API_URL, API_USER, API_PASS, API_TYPE );
 	     }
 
 	     public function testApiNotNull() {

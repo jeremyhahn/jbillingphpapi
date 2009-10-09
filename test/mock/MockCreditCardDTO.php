@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * @package com.makeabyte.contrib.jbilling.php.test
+ * @package com.makeabyte.contrib.jbilling.php.test.mock
  */
 
 class MockCreditCardDTO extends MockObject {
@@ -27,11 +27,11 @@ class MockCreditCardDTO extends MockObject {
 
 	  	     $CreditCardDTO = new CreditCardDTO();
 
-			 $CreditCardDTO->setName( "phpUnitTest" );
-			 $CreditCardDTO->setNumber( "4012888888881881" );
-			 $CreditCardDTO->setSecurityCode( 123 );
-			 $CreditCardDTO->setType( 2 ); // Visa
-			 $CreditCardDTO->setExpiry( date("c") ); // ISO 8601 date
+			 $CreditCardDTO->setName( CC_NAME );
+			 $CreditCardDTO->setNumber( CC_NUMBER );
+			 $CreditCardDTO->setSecurityCode( CC_SECURITYCODE );
+			 $CreditCardDTO->setType( CC_TYPE );
+			 $CreditCardDTO->setExpiry( CC_EXPIRY );
 
 			 return $CreditCardDTO;
 	  }

@@ -29,42 +29,61 @@
 
 interface JbillingAPI {
 
-          public function getInvoiceWS( $invoiceId );
-          public function getLatestInvoice( $userId );
-          public function getLastInvoices( $userId, $number );
-	      public function getInvoicesByDate( $since, $until );
-	      public function createUser( UserWS $newUser );
-	      public function deleteUser( $userId );
-          public function deleteInvoice( $invoiceId );
-          public function updateUserContact( $userId, $typeId, ContactWS $contact );
-          public function updateUser( UserWS $user );
-          public function getUserWS( $userId );
-          public function getUserContactsWS( $userId );
-          public function getUserId( $username );
-          public function getUsersInStatus( $statusId );
-          public function getUsersNotInStatus( $statusId );
-          public function getUsersByCustomField( $typeId, $value );
-          public function create( UserWS $user, OrderWS $order );
-          public function payInvoice( $invoiceId );
-          public function updateCreditCard( $userId, CreditCardDTO $creditCard );
-          public function createOrderPreAuthorize( OrderWS $order );
-          public function createOrder( OrderWS $order );
-          public function createOrderAndInvoice( OrderWS  $order );
-          public function updateOrder( OrderWS $order );
-          public function getOrder( $orderId );
-          public function getOrderByPeriod( $userId, $periodId );
-          public function getOrderLine( $orderLineId );
-          public function updateOrderLine( OrderLineWS $line );
-          public function getLatestOrder( $userId );
-          public function getLastOrders( $userId, $number );
-          public function deleteOrder( $id );
-          public function applyPayment( PaymentWS $payment, $invoiceId );
-          public function getPayment( $paymentId );
-          public function getLatestPayment( $userId );
-          public function getLastPayments( $userId, $number );
-          public function createItem( ItemDTOEx $dto );
-          public function getAllItems();
-          public function getUserTransitions( $from, $to );
-          public function authenticate( $username, $password );
+		  public function getLatestInvoice( $userId );
+		  public function deleteInvoice( $id );
+		  public function getLatestOrder( $userId );
+		  public function processPayment( PaymentWS $payment );
+		  public function getLastOrders( $userId, $number );
+		  public function payInvoice( $invoiceId );
+		  public function updateItem( ItemDTOEx $item );
+		  public function updateUserContact( $userId, $typeId, ContactWS $contact );
+		  public function getUserItemsByCategory( $userId, $categoryId );
+		  public function getPayment( $paymentId, PaymentWS $payment );
+		  public function getUserWS( UserWS $user );
+		  public function validatePurchase( $userId, $itemId, array $fields );
+		  public function getLastInvoicesByItemType( $userId, $itemTypeId, $number );
+		  public function createItem( ItemDTOEx $dto );
+		  public function createOrderPreAuthorize( OrderWS $order );
+		  public function getCurrentOrder( $userId, $date );
+		  public function authenticate( $username, $password );
+		  public function getUsersNotInStatus( $statusId );
+		  public function getUsersInStatus( $statusId );
+		  public function getLastInvoices( $userId, $number );
+		  public function getUserId( $username );
+		  public function getItem( $itemId, $userId = null, $pricingFields = array() );
+		  public function createOrder( OrderWS $order );
+		  public function updateUser( UserWS $user );
+		  public function getUserTransitions( $to, $from );
+		  public function applyPayment( PaymentWS $payment, $invoiceId );
+		  public function createUser( UserWS $user );
+		  public function getInvoicesByDate( $since, $until );
+		  public function getLastPayments( $userId, $number );
+		  public function getUsersByCustomField( $typeId, $value );
+		  public function deleteUser( $userId );
+		  public function getLatestPayment( $userId );
+		  public function isUserSubscribedTo( $userId, $itemId );
+		  public function updateOrderLine( OrderLineWS $line );
+		  public function deleteOrder( $orderId );
+		  public function createInvoice( $userId, $onlyRecurring = false );
+		  public function getUserTransitionsAfterId( $id );
+		  public function create( UserWS $user, OrderWS $order );
+		  public function createOrderAndInvoice( OrderWS $order );
+		  public function getOrder( $orderId );
+		  public function updateOrder( OrderWS $order );
+		  public function getLatestOrderByItemType( $userId, $itemTypeId );
+		  public function getOrderByPeriod( $userID, $periodId );
+		  public function updateCurrentOrder( $userId, array $lines, array $fields, $date, $eventDescription );
+		  public function getOrderLine( $orderLineId );
+		  public function getLastOrdersByItemType( $userId, $itemTypeId, $number );
+		  public function getAllItems();
+		  public function updateCreditCard( $userId, CreditCardDTO $creditCard );
+		  public function getLatestInvoiceByItemType( $userId, $itemTypeId );
+		  public function rateOrder( OrderWS $order );
+		  public function getInvoiceWS( $invoiceId );
+
+		  // Need documentation to complete these methods
+		  // public function getUsersByStatus(getUsersByStatus $parameters)
+		  // public function getUserContactsWS(getUserContactsWS $parameters)
+		  // public function getUsersByCreditCard(getUsersByCreditCard $parameters)
 }
 ?>

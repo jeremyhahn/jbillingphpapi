@@ -53,6 +53,9 @@ class ContactWS {
       var $title;                   // Title for the contact, such as “Mr.” or “Dr.”.
       var $userId;                  // Identifies the user account to which this contact belongs to.
 
+      public $fieldNames; // string
+  	  public $fieldValues; // string
+
       /**
        * The ContactDTO constructor
        * 
@@ -542,6 +545,26 @@ class ContactWS {
 	  public function getUserId() {
 	  	
 	  	     return $this->userId;
+	  }
+
+	  public function setFieldNames( $names ) {
+
+	  		 $this->fieldNames = $names;
+	  }
+
+	  public function getFieldNames() {
+
+	  		 return $this->fieldNames;
+	  }
+
+	  public function setFieldValues( $values ) {
+
+	  		 $this->values = $values;
+	  }
+
+	  public function getFieldValues() {
+
+	  		 return $this->fieldValues;
 	  }
 }
 ?>

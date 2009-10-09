@@ -23,8 +23,6 @@ require_once 'BaseTest.php';
 
 class CreateTest extends BaseTest {
 
-	  public function CreateTest() { }
-
 	  public function test() {
 
   	  	     $MockContactWS = new MockContactWS();
@@ -43,9 +41,9 @@ class CreateTest extends BaseTest {
 			 	   PHPUnit_Framework_Assert::assertObjectHasAttribute( 'orderId', $result, "Error creating new order" );
 			       PHPUnit_Framework_Assert::assertObjectHasAttribute( 'invoiceId', $result, "Error creating new invoice" );
 			 }
-			 catch( JbillingAPIException $jbex ) {
+			 catch( JbillingAPIException $e ) {
 
-			        PHPUnit_Framework_Assert::fail( $jbex->getMessage() );
+			        PHPUnit_Framework_Assert::fail( $e->getMessage() );
 			 }
 	  }
 }

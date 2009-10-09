@@ -23,23 +23,24 @@ require_once 'BaseTest.php';
 
 class CreateOrderTest extends BaseTest {
 
-	  public function CreateOrderTest() { }
-
 	  public function test() {
 
 	  		 $MockOrderLineWS = new MockOrderLineWS();
 
              $MockOrderWS = new MockOrderWS();
-             $MockOrderWS->setOrderLines( $MockOrderLineWS->getObject() );
+             $MockOrderWS->setOrderLines( array( $MockOrderLineWS->getObject() ) );
 
 	  	  	 try {
 	  		 	   $actual = $this->api->createOrder( $MockOrderWS->getObject() );
-			       PHPUnit_Framework_Assert::assertGreaterThan( 0, $actual, "Order already exists!" );
+			       PHPUnit_Framework_Assert::assertGreaterThan( 0, $actual, "Order already exists" );
+			       PHPUnit_Framework_Assert::assertNotNull( $actual, "Failed to create order" );
 			 }
-			 catch( JbillingAPIException $jbex ) {
+			 catch( JbillingAPIException $e ) {
 
-			 	    PHPUnit_Framework_Assert::fail( $jbex->getMessage() );
+			 	    PHPUnit_Framework_Assert::fail( $e->getMessage() );
 			 }
 	  }
 }
+
+
 ?>

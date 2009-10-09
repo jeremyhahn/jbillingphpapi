@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * @package com.makeabyte.contrib.jbilling.php.test
+ * @package com.makeabyte.contrib.jbilling.php.test.mock
  */
 
 class MockContactWS extends MockObject {
@@ -27,14 +27,17 @@ class MockContactWS extends MockObject {
 
 	  	     $ContactWS = new ContactWS();
 
-			 $ContactWS->setFirstName( "phpUnit" );
-			 $ContactWS->setLastName( "Test" );
-			 $ContactWS->setPhoneNumber( "123-456-7890" );
-			 $ContactWS->setEmail( "php@unit-test.com" );
-			 $ContactWS->setAddress1( "123 Anywhere st" );
-			 $ContactWS->setCity( "Test City" );
-			 $ContactWS->setStateProvince( "Test State" );
-			 $ContactWS->setPostalCode( "12345" );
+			 $ContactWS->setFirstName( CONTACT_FIRSTNAME );
+			 $ContactWS->setLastName( CONTACT_LASTNAME );
+			 $ContactWS->setPhoneNumber( CONTACT_PHONENUMBER );
+			 $ContactWS->setEmail( CONTACT_EMAIL );
+			 $ContactWS->setFieldNames( CONTACT_FIELDNAMES );
+			 $ContactWS->setFieldValues( CONTACT_FIELDVALUES );
+			 $ContactWS->setAddress1( CONTACT_ADDRESS1 );
+			 $ContactWS->setAddress2( CONTACT_ADDRESS2 );
+			 $ContactWS->setCity( CONTACT_CITY );
+			 $ContactWS->setStateProvince( CONTACT_STATEPROVINCE );
+			 $ContactWS->setPostalCode( CONTACT_POSTALCODE );
 
 			 return $ContactWS;
 	  }

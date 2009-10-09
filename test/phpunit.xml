@@ -21,6 +21,13 @@
     <file>CreateTest.php</file>
     <file>CreateUserTest.php</file>
     <file>CreateOrderTest.php</file>
+    <file>CreateInvoiceTest.php</file>
+    <file>GetLatestInvoiceTest.php</file>
+    <file>GetLatestOrderTest.php</file>
     <file>ApplyPaymentTest.php</file>
+    <file>GetUserWSTest.php</file>
+    <file>DeleteInvoiceTest.php</file>
+    <file>ProcessPaymentTest.php</file>
+    <file>GetLastOrdersTest.php</file>
   </testsuite>
 </phpunit>
