@@ -10,36 +10,18 @@
 		<body>
 						<h1 align="center">INSTALL</h1>
 <pre>
-Requirements:
+REQUIREMENTS:
 -------------
-This wrapper requires the use of PEAR SOAP. Refer to the PHP documentation for details on installing PEAR SOAP on your system.
+PHP 5.0+
+PHP 5 Soap extension (http://www.php.net/soap)
 
 
-Installation:
-------------_
-Copy the contents of the /src folder to your project folder.
+INSTALLATION:
+-------------
+Copy the contents of the /src folder to your project.
 
 
-PEAR SOAP:
-----------
-There is a bug in the current version of the PEAR SOAP library which requires the following edit to SOAP/Base.php beginning on line 1242.
-
-/*
-// A little more magic than should be in a qname.
-$p = strpos($this-&gt;name, '[');
-if ($p) {
-// TODO: Need to re-examine this logic later.
-// Chop off [].
-$this-&gt;arraySize = explode(',', substr($this-&gt;name, $p + 1, -$p - 2));
-$this-&gt;arrayInfo = substr($this-&gt;name, $p);
-$this-&gt;name = substr($this-&gt;name, 0, $p);
-}
-*/
-
-This TODO which needs to be re-examined later causes a bug with the Jbilling PHP library when working with complex data types (specifically object properties which are of an Array data type).
-
-
-UNIT Testing:
+UNIT TESTING:
 -------------
 To use the testing package, install PHP Unit 3 via PEAR.
 
@@ -47,13 +29,16 @@ pear channel-discover pear.phpunit.de
 pear install phpunit/PHPUnit
 
 
-Usage:
+USAGE:
 ------
 Include the jBillingAPIFactory in your project using something like:
 
-require_once( &quot;jbilling-php-api-v1_1/src/JbillingAPIFactory.php&quot; );
+&lt;code&gt;require_once( &quot;jbillingphpapi/src/JbillingAPIFactory.php&quot; );&lt;/code&gt;
 
-$jbilling = jbillingAPIFactory::getAPI( &quot;http://localhost/jboss-net/services/billing?wsdl&quot;, &quot;admin&quot;, &quot;123qwe&quot; );
+Currently, only CXF (SOAP) is supported. A future version will include the Hessian protocol as well. The CXF API can be created like this: 
+
+&lt;code&gt;
+$api = jbillingAPIFactory::getAPI( &quot;http://localhost:8080/billing/cxf/soap.service?wsdl&quot;, &quot;admin&quot;, &quot;123qwe&quot;, JBILLINGAPI_TYPE_CXF );
 
 // Instantiate each of the required JBilling objects
 $UserWS = new UserWS();
@@ -112,20 +97,21 @@ $OrderWS-&gt;setUserId( 22 ); // Penny bright
 
 // Attempt to create the new user and purcahse order
 try {
-      print_r( $jbilling-&gt;create( $UserWS, $OrderWS ) ); // New id's returned
-      //print_r( $jbilling-&gt;createUser( $UserWS ) );  // New user id returned
-      //print_r( $jbilling-&gt;createOrder( $OrderWS ) ); // New order id returned
-      //print_r( $jbilling-&gt;getUserWS( 22 ) );  // User details for penny bright
+      print_r( $api-&gt;create( $UserWS, $OrderWS ) ); // New id's returned
+      //print_r( $api-&gt;createUser( $UserWS ) );  // New user id returned
+      //print_r( $api-&gt;createOrder( $OrderWS ) ); // New order id returned
+      //print_r( $api-&gt;getUserWS( 22 ) );  // User details for penny bright
 }
 catch( JbillingAPIException $jbex ) {
 
         print_r( $jbex );
 }
+&lt;/code&gt;
 
-Enjoy :)
+Enjoy! :)
 </pre>
 	<p class="notes" id="credit">
-		Documentation generated on Fri, 09 Oct 2009 14:22:30 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+		Documentation generated on Fri, 09 Oct 2009 16:23:03 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
 	</p>
 	</body>
 </html>

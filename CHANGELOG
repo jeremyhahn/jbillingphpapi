@@ -1,4 +1,8 @@
-9/18/2009 - jbilling-php-api-v2.0
+11/18/2009 - jbilling-php-api-v2.1
+----------------------------------
+* Bug fix to CXFAPI::getUserWS. Required UserWS parameter, however, jbilling's api requires (integer) userId. (Thanks for the report Thibaut De Muynck)
+
+9/18/2009 - jbilling-php-api-v2.0 (Sponsored by jBilling & Lampada Global)
 ---------------------------------
 * License upgraded to GPL v3
 * Refactored jBillingAPI interface to be in alignment with jbilling 2.x

@@ -387,10 +387,10 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 	   * @return getUserWSResponse (UserWS) The account information, or null if the supplied userId is not assigned to an
 	   * 		 existing user. If the parameter is null or inexistent, a JbillingAPIException is generated.
 	   */
-  	  public function getUserWS( UserWS $user ) {
+  	  public function getUserWS( $userId ) {
 
   	  		 $o = new getUserWS();
-  	  		 $o->arg0 = $user->getUserId();
+  	  		 $o->arg0 = $userId;
 
   	  		 return $this->invoke( 'getUserWS', $o );  	  		 
   	  }
@@ -407,13 +407,13 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 	   * 		to be passed to the rules engine for evaluation. Pricing fields are descriptors that provide
 	   * 		further information to the pricing engine and aid in forming the price for the order itself.
 	   * 		This parameter is optional and used in conjunction with the pricing rules engine.
-	   * 		See section “A word on pricing” for a more detailed explanation of the use of pricing
+	   * 		See section A word on pricing for a more detailed explanation of the use of pricing
 	   * 		fields and the purpose of rule-based pricing.
 	   * 		Note to SOAP based integration implementors: the pricingFields parameter of this
 	   * 		call is implemented as an array of PricingField structures only in the API. Direct calls to
 	   * 		the SOAP layer require you to encode and decode this array of values into a serialized
 	   * 		string (so, for SOAP calls, the third parameter is actually a String). For more details on
-	   * 		how to serialize these structures into strings, see section “A word on pricing”.
+	   * 		how to serialize these structures into strings, see section A word on pricing.
 	   * @return validatePurchaseResponse (Double) The maximum quantity of the itemId that the user can purchase
 	   * 		 according to their dynamic balance (available credit remaining or prepaid balance). Returns null
 	   * 		 if userId or itemId is null.
@@ -490,7 +490,7 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 
 	 /**
 	  * Returns the mediation current one-time order for this user for the given date. See the
-	  * “Telecom Guide” for more information about the mediation module and current one-time orders.
+	  * Telecom Guide for more information about the mediation module and current one-time orders.
 	  *
    	  * @param Integer $userId The identifier of the user whose current one-time order is being returned.
    	  * @param Date $date The date that determines which current one-time order should be returned. The
@@ -622,13 +622,13 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 	  * 					  are descriptors that provide further information to the pricing engine and aid in forming
 	  * 					  the price for the order itself. This parameter is optional and used in conjunction with the
 	  * 					  pricing rules engine.
-	  * See section “A word on pricing” for a more detailed explanation of the use of pricing
+	  * See section A word on pricing for a more detailed explanation of the use of pricing
 	  * fields and the purpose of rule-based pricing.
 	  * Note to SOAP based integration implementors: the pricingFields parameter of this
 	  * call is implemented as an array of PricingField structures only in the API. Direct calls to
 	  * the SOAP layer require you to encode and decode this array of values into a serialized
 	  * string (so, for SOAP calls, the third parameter is actually a String). For more details on
-	  * how to serialize these structures into strings, see section “A word on pricing”.
+	  * how to serialize these structures into strings, see section A word on pricing.
 	  * 
 	  * @return getItemResponse The item description structure for the item being retrieved.
 	  */
@@ -644,7 +644,7 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 
 	 /**
 	  * Creates an order. When creating an order, you can indicate that the information of an order line should be fetched from
-	  * the properties of an existing item. This is done through the field OrderLineWS.useItem. If this flag is set to ‘true’, then
+	  * the properties of an existing item. This is done through the field OrderLineWS.useItem. If this flag is set to true, then
 	  * the price of the order line will be the price of the item designated in OrderLineWS.itemId. The behavior of some fields change
 	  * depending on this flag:
 	  *
@@ -712,7 +712,7 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 
 	 /**
    	  * This method enters a payment to the user account. It does not invoke any payment
-	  * processes, it just signals the payment as “entered”. It is useful to signal payments done
+	  * processes, it just signals the payment as entered. It is useful to signal payments done
 	  * via external payment processes (a cheque being cashed, for example).
 	  * This method can apply a payment of any type. The parameter for the related invoice,
 	  * although optional, should always be specified to allow the system to properly trace late
@@ -757,13 +757,13 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 	  * Use this method to retrieve all the invoices created in a given period of time. The method will return the ids of the
 	  * invoices, so you will have to call getInvoice to get the complete object related to each ID. The results will be returned
 	  * in no particular order. This method can help you synchronize jBilling with other applications that require an updated list
-	  * of invoices. For example, to get all the invoices for January 2005, you would call, getInvoicesByDate(“2005-01-01”, “2005-01-31”).
+	  * of invoices. For example, to get all the invoices for January 2005, you would call, getInvoicesByDate(2005-01-01, 2005-01-31).
 	  *
 	  * @param Date $since The starting date for the data extraction.
 	  * @param Date $until The ending date for the data extraction.
 	  * @return getInvoicesByDateResponse (Integer[]): This method returns the invoices generated within the period specified by the parameters.
 	  * 		Both dates are included in the query. The date used for the query is the actual creation of the invoices (time stamp), regardless
-	  * 		of the ‘invoice date’, that is assigned following the billing rules and configuration parameters. Subsequent calls to getInvoice
+	  * 		of the invoice date, that is assigned following the billing rules and configuration parameters. Subsequent calls to getInvoice
 	  * 		are necessary to retrieve the related InvoiceWS objects. If the no invoices where generated for the specified period, an empty
 	  * 		array is returned. If the parameters do not follow the required format (yyyy-mm-dd), null is returned.
 	  */
@@ -1063,7 +1063,7 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 	   *
 	   * @param Integer $userId The user for which the extraction is desired.
 	   * @param Integer $periodId Identifier for the period type. This value can be obtained from the jBilling
-	   * 		User Interface under “Orders -> Periods” or from your billing administrator.
+	   * 		User Interface under Orders -> Periods or from your billing administrator.
 	   * @return getOrderByPeriodResponse (Integer[]) Array containing the identifiers for the orders that respond to the input parameters.
 	   */
 	  public function getOrderByPeriod( $userID, $periodId ) {
@@ -1077,7 +1077,7 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 
 	  /**
 	   * Allows the mediation current one-time order to be updated with an event for this user for the given date. This method is
-	   * used for real-time mediation of events. See the “Telecom Guide” for more information about the mediation module, mediation
+	   * used for real-time mediation of events. See the Telecom Guide for more information about the mediation module, mediation
 	   * events and current one-time orders. The order lines update existing lines or create new lines, depending on what items are
 	   * already in the order. The pricing fields determine the pricing for this event, The event description is saved in the mediation
 	   * event record. Returns the updated order.
@@ -1088,11 +1088,11 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 	   * @param PricingField[] $fields Array of PricingField structures specifying optional pricing parameters to be passed to the rules
 	   * 		engine for evaluation. Pricing fields are descriptors that provide further information to the pricing engine and aid in
 	   * 		forming the price for the border itself. This parameter is optional and used in conjunction with the pricing rules engine.
-	   * 		See section “A word on pricing” for a more detailed explanation of the use of pricing fields and the purpose of rule-based pricing.
+	   * 		See section A word on pricing for a more detailed explanation of the use of pricing fields and the purpose of rule-based pricing.
 	   * 		Note to SOAP based integration implementors: the pricingFields parameter of this call is implemented as an array of PricingField
 	   * 		structures only in the API. Direct calls to the SOAP layer require you to encode and decode this array of values into a serialized
 	   * 		string (so, for SOAP calls, the third parameter is actually a String). For more details on how to serialize these structures into
-	   * 		strings, see section “A word on pricing”.
+	   * 		strings, see section A word on pricing.
 	   * @param Date $date The date that determines which current one-time order should be updated and returned. The date will fall within
 	   * 		the order's active period.
 	   * @param String $eventDescription The description to be used for the mediation event record.
@@ -1210,7 +1210,7 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 	   * Performs pricing calculations on an order as if it was inserted, but does not actually
 	   * create the order. Useful if you need to have immediate feedback on the pricing applied
 	   * to a specific customer or item combinations, specially if you use rule-driven pricing (see
- 	   * the “Extensions Guide” for more information on rule-based pricing).
+ 	   * the Extensions Guide for more information on rule-based pricing).
 	   *
 	   * @param OrderWS $order Holds the data for the order being rated
 	   * @return rateOrderResponse (OrderWS) The data for the order, as generated by the pricing engine. Mostly, it holds the
@@ -1268,7 +1268,7 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 	   * 
 	   * @param $function The remote method/function name to invoke
 	   * @param $parameters The appropriate jBilling WSDL (object) parameter for the method call
-	   * @return The WebService response
+	   * @return The SOAP response object
 	   * @throws JbillingAPIException
 	   */
 	  private function invoke( $function, $parameters ) {
@@ -1277,13 +1277,13 @@ class CXFAPI extends SoapClient implements JbillingAPI {
 	  		  	     $result = $this->__soapCall( $function, array( $parameters ), $this->options );
 	  		  	     if( is_soap_fault( $result ) )
 	  		  	     	 throw new JbillingAPIException( $result );
+
+	  		  	     return $result;
 			  }
 			  catch( Exception $e ) {
 
 					 throw new JbillingAPIException( $this->__soap_fault );
 			  }
-
-			  return $result;
 	  }
 }
 

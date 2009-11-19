@@ -85,7 +85,7 @@ define( 'ORDERLINE_QUANTITY', 1 );
 define( 'ORDERLINE_DESCRIPTION', 'This is an order placed by the jbilling-php-api unit test.' );
 
 // OrderWS
-define( 'ORDER_ID', 300 );
+define( 'ORDER_ID', 501 );
 define( 'ORDER_USERID', USER_ID );
 define( 'ORDER_PERIOD', 1 ); // Monthly
 define( 'ORDER_BILLINGTYPEID', 1 ); // Pre-paid

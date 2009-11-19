@@ -28,7 +28,7 @@ class CreateInvoiceTest extends BaseTest {
 	  	  	 try {
 	  		 	   $actual = $this->api->createInvoice( USER_ID );
 			       PHPUnit_Framework_Assert::assertGreaterThan( 0, $actual, "Invoice already exists" );
-			       PHPUnit_Framework_Assert::assertNotNull( $actual, "Failed to create invoice" );
+			       PHPUnit_Framework_Assert::assertNotNull( $actual->response, "Failed to create invoice" );
 			 }
 			 catch( JbillingAPIException $e ) {
 

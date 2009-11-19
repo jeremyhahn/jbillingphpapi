@@ -39,7 +39,7 @@ interface JbillingAPI {
 		  public function updateUserContact( $userId, $typeId, ContactWS $contact );
 		  public function getUserItemsByCategory( $userId, $categoryId );
 		  public function getPayment( $paymentId, PaymentWS $payment );
-		  public function getUserWS( UserWS $user );
+		  public function getUserWS( $userId );
 		  public function validatePurchase( $userId, $itemId, array $fields );
 		  public function getLastInvoicesByItemType( $userId, $itemTypeId, $number );
 		  public function createItem( ItemDTOEx $dto );
